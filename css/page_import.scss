@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Shrikhand";
+    src: url(../Shrikhand/Shrikhand-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Roboto_black";
+    src: url(../Roboto/Roboto-Black.ttf);
+  }
+  @font-face {
+    font-family: "Roboto_light";
+    src: url(../Roboto/Roboto-Light.ttf);
+  }
+  @font-face {
+    font-family: "Roboto_thin";
+    src: url(../Roboto/Roboto-Thin.ttf);
+  }
+  @font-face {
+    font-family: "Roboto_bold";
+    src: url(../Roboto/Roboto-Bold.ttf);
+  }
+  @font-face {
+    font-family: "Roboto_regular";
+    src: url(../Roboto/Roboto-Regular.ttf);
+  }
+  @font-face {
+    font-family: "Roboto_medium";
+    src: url(../Roboto/Roboto-Medium.ttf);
+  }
+  $font_Shrikhand:"Shrikhand";
+  $font_medium:"Roboto_medium";
+  $font_regular:"Roboto_regular";
+  $font_bold: "Roboto_bold";
+  $font_thin:"Roboto_thin";
+  $font_light:"Roboto_light";
+  $font_black: "Roboto_black";
+
+$couleur_primaire:#9356dc;
+$couleur_secondaire:#ff79da;
+$couleur_tertiaire:#99e2d0;
+$degrade:gradient($couleur_secondaire, $couleur_primaire);
+$couleur_gris:#e4e0e0;
+$couleur_blanc:white;
+$couleur_loge: black;
+$couleur_footer:rgb(10, 10, 10);
+$couleur_txt_footer: white;
+$shadow:2px 4px 9px#aaa8a8;
+$radius1:10px;

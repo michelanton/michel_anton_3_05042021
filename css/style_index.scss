@@ -1,0 +1,227 @@
+@import "css/page_import.scss";
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+.logo{
+  text-align: center;
+ padding: 20px 0px 10px 0px;
+svg{
+    fill: black;
+}
+}
+.block1{
+    background-color:$couleur_gris;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+.localisation{
+    background-color:darken($color: $couleur_gris, $amount: 10);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+   .txt-entete{
+    margin: 800px 80px;
+   }
+form input{
+    margin-left: 20px;
+    background-color:darken($color: $couleur_gris, $amount: 10);
+    border: none; 
+    padding: 10px;
+    
+}
+}
+.txt_entete{
+  h1{ margin: 20px 40px 10px 40px;
+    font-family:$font_black;
+font-size: 20px;
+}
+    p{margin: 10px 40px 20px 40px;
+        font-size: 14px;
+        font-family:$font_light;
+    }
+       
+}
+.bouton{
+ 
+    font-family:    $font_thin;
+    background-image:linear-gradient($couleur_secondaire 8%,  $couleur_primaire );;
+
+    width: 200px;
+    height: 40px; 
+    border-radius: 25px;
+    border: none;
+    box-shadow: $shadow;
+    margin: 25px auto  30px auto; 
+  
+    @if (lightness($couleur_primaire) > 50%) {
+        color:white;
+        }
+        @else {
+        color: black;
+        }
+        p{
+           padding: 10px;
+          
+        }
+}
+}
+.box_fonction{
+    font-family: "Roboto_bold"; 
+    padding: 15px 0px; 
+.txt_fonction{
+    font-family:$font_black;
+    font-size: 20px;
+    margin:10px auto;
+    padding-left: 10%;
+}
+ol{
+    padding: 0px;
+}
+
+
+}
+.fonc{ 
+    position: relative;
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+    margin: 20px auto;
+    border: none ;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    padding-top: 17px ;
+    list-style-type: none;
+  i{
+      position: absolute;
+    left: 25px;
+    top: 18px;
+    margin-right: 15px;
+  }
+  svg{
+      position:absolute;
+      fill: darken($color: $couleur_primaire, $amount: 20);
+      left: -10px;
+  }
+  p{
+      margin: 0px 0px 0px 55px;
+  }
+    &.fonc1, &.fonc2{background-color: $couleur_gris;
+    }
+    &.fonc3{ background-color:lighten($color: $couleur_primaire, $amount: 20);  
+      }
+}
+.restaurants{
+    background-color: $couleur_gris;
+    padding-bottom: 20px;
+    h3{
+        font-family:  $font_black;
+        margin-left: 20px;
+    }
+
+}
+.cadre_restau{
+    position: relative;
+    width: 85%;
+    height: 200px;
+    margin:20px 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+ 
+.txt_cadre{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    bottom: 0px;
+    line-height: 10px;
+} 
+p{
+   
+    font-size: 10px;
+    margin: 8px 0px 10px 10px;
+    font-family:$font_regular;
+} 
+h4{
+    font-family:  $font_bold;
+    font-size: 12px;
+    margin: 10px 0px 0px 10px;
+}
+img{
+    width: 100%;
+    object-position: 0px -30px;
+}
+.coeur {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.coeur  :hover{
+    cursor: pointer;
+    .far{ display: none;}
+}
+.fas{
+    display: none;
+}
+}
+
+
+footer{
+    margin: 0%;
+    padding: 0%;
+    .logo{ 
+        text-align: left;
+        padding: 10px 0px 0px 30px;
+       
+        svg{ 
+            width: 90px;
+            height: 40px; 
+        @if (lightness($couleur_footer) > 50%) {
+            fill: black;
+            }
+            @else {
+            fill:#ffffff;
+            }
+        }
+        ul{
+            list-style-type: none;
+        }}
+    }
+.cadre_footer{
+    background-color:$couleur_footer;
+ 
+}
+.list_footer{
+    list-style-type: none;
+    color: $couleur_txt_footer;
+    padding: 0px 0px 20px 30px;
+    margin: 0px;
+    font-family: $font_regular ;
+    @if (lightness($couleur_footer) < 50%) {
+        color:white;
+        }
+        @else {
+        color: black;
+        }
+        i{
+            margin-right: 10px;
+            font-size: 10px ;
+            
+        }
+        li{
+            padding-bottom: 10px;
+            font-size: 14px;
+           
+        }
+}

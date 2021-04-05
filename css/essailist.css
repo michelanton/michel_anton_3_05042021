@@ -1,0 +1,7 @@
+ol{
+    color: red;
+    font-size: 15px;
+    list-style-type: none;
+    list-style-image: url(3.jpg);
+    margin-left: 50px;
+}

@@ -1,0 +1,240 @@
+@import "page_import.scss";
+
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+      
+.logo{
+    text-align: center;
+   padding: 20px 0px 10px 0px;
+  svg{
+      fill: black;
+  }
+  i{
+      vertical-align: middle;
+  }
+}
+#carte{
+    background-color: $couleur_gris;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    
+  }
+.tete{ position: relative;
+ .image_carte{
+ 
+    img{
+        width: 100%;
+    } 
+}
+.titre_carte{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    background-color: $couleur_gris;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;
+ 
+    h1{ 
+        margin: 10px 40px 10px 15px;
+        font-family: $font_Shrikhand, 'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-weight: normal;   
+    } 
+}
+.coeur {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 25px;
+    .fas{
+        display: none;
+        color: $couleur_secondaire;
+        }
+    } 
+          
+    }
+    
+.menu{
+    position: relative;
+     margin-left: 10px;
+     
+        
+     h3{
+     font-family:  $font_regular;
+     text-transform: uppercase;
+     font-size: 11px;
+     margin:20px 0px 30px 10px
+    }
+    
+ }
+.ligne{
+    position: absolute;
+    top: 20px;
+    width: 30px;
+    height: 10px;
+    color: black;
+ }
+.titre_menu{
+    position: relative;
+    background-color: white;
+    width: 90%;
+    height: 40px;
+    margin: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow:  $shadow;
+    cursor: pointer;
+    overflow: hidden;
+
+    .selection_menu{
+        display: none;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        width: 50px;
+        background-color:$couleur_tertiaire ;
+    }
+    h3{
+        font-family: $font_bold;
+        font-size: 12px;
+        margin: 0px 0px 3px 10px;
+        padding-top: 6px;
+    }
+    h4{
+        font-family: $font_bold;
+        font-size: 11px;
+        margin: 0px 0px 2px 10px;
+        padding-top: 6px;
+    }
+    p{
+        font-family:  $font_regular;
+        margin: 0px 0px 0px 10px;
+        font-size: 11px;
+    }
+    .prix{
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        font-family: $font_bold;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .choix{
+        display: inline;
+        position: absolute;
+        right: -40px;
+        top: 00px;
+        width: 40px;
+        height: 100%;
+        text-align: center;
+        line-height: 2.5;
+        border-top-right-radius: $radius1;
+        border-bottom-right-radius: $radius1;
+        background-color: darken($color: $couleur_tertiaire, $amount: 10);
+      
+      
+    }
+    
+}
+.titre_menu:hover{
+   
+    
+    .prix{
+        margin-right: 40px;
+        transition: 2s;
+    }
+.choix{
+    display: inline;
+    transform: translateX(-40px) ;
+    transition: 0.8s;
+}
+.choix i{
+    color: $couleur_blanc;
+    transform: rotate(1turn);
+    transition: transform 0.5s;
+}
+}
+    
+.bouton{
+ 
+    font-family:   $font_regular;
+    background-image:linear-gradient($couleur_secondaire, $couleur_primaire);
+    width: 140px;
+    height: 35px; 
+    border-radius: 25px;
+    border: none;
+    box-shadow: $shadow;
+    margin: 30px auto  00px auto;
+ 
+  
+    @if (lightness($couleur_primaire) > 50%) {
+        color:white;
+        }
+        @else {
+        color: black;
+        }
+        p{
+            font-family:$font_light;
+            font-size: 12px;
+          text-align: center;
+          margin: 0px;
+         padding-top: 10px;
+        }
+}
+
+
+
+
+  footer{
+    margin: 0%;
+    padding: 0%;
+    .logo{ 
+        text-align: left;
+        padding: 10px 0px 0px 30px;
+       
+        svg{ 
+            width: 90px;
+            height: 40px; 
+        @if (lightness($couleur_footer) > 50%) {
+            fill: black;
+            }
+            @else {
+            fill:#ffffff;
+            }
+        }
+        ul{
+            list-style-type: none;
+        }}
+    }
+
+
+.cadre_footer{
+    background-color:$couleur_footer;
+ 
+}
+.list_footer{
+    list-style-type: none;
+    font-size: 12px;
+    color: $couleur_txt_footer;
+    padding: 0px 0px 20px 30px;
+   
+    margin: 0px;
+    @if (lightness($couleur_footer) < 50%) {
+        color:white;
+        }
+        @else {
+        color: black;
+        }
+        i{
+            margin-right: 10px;
+        }
+        li{
+            padding-bottom: 10px;
+        }
+}
