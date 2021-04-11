@@ -100,8 +100,8 @@ body {
   background-image: linear-gradient(to bottom, #ff79da 27%, #9356dc 83%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-animation: test 0.5s ease-in-out;
-          animation: test 0.5s ease-in-out;
+  -webkit-animation: test 0.5s ease-in;
+          animation: test 0.5s ease-in;
 }
 
 .tete .coeur:active .far {
@@ -356,8 +356,8 @@ p {
 
 .bouton {
   font-family: "Roboto_regular";
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(#ff79da, #9356dc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ff79da), color-stop(100%, #9356dc), color-stop(100%, #9356dc), to(#9356dc));
+  background-image: linear-gradient(to bottom, #ff79da 1%, #9356dc 100%, #9356dc 100%, #9356dc 100%);
   width: 140px;
   height: 35px;
   border-radius: 25px;
@@ -365,7 +365,17 @@ p {
   -webkit-box-shadow: 2px 4px 9px #aaa8a8;
           box-shadow: 2px 4px 9px #aaa8a8;
   margin: 30px auto  00px auto;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: white;
+}
+
+.bouton:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fd99e1), to(#a170dd));
+  background: linear-gradient(#fd99e1, #a170dd);
+  -webkit-box-shadow: 2px 4px 9px #616060;
+          box-shadow: 2px 4px 9px #616060;
 }
 
 .bouton p {
@@ -374,16 +384,6 @@ p {
   text-align: center;
   margin: 0px;
   padding-top: 10px;
-}
-
-.bouton:hover {
-  /*filter: brightness(1.2);*/
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff9ae2), to(#a472e0));
-  background-image: linear-gradient(#ff9ae2, #a472e0);
-  -webkit-box-shadow: 2px 2px 8px #535353;
-          box-shadow: 2px 2px 8px #535353;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 footer {

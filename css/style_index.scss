@@ -9,7 +9,7 @@
     width: 100%;
     height: 100%;
   
-    animation: ground2 1.5s linear 3s 1 both;
+    animation: ground2 1.5s ease-in 2.8s 1 both;
 
 .logo_loader{
     text-align: center;
@@ -33,6 +33,7 @@
     to {
         
         transform: translateX(1000px);
+        opacity: 0;
     }
     
     }
@@ -54,24 +55,24 @@
         text-align: center;
       }
     .ligne_point .point:nth-child(6) { 
-        animation: lol 3s 3 ease-in-out;
+        animation: loader 3s 3 ease-in-out;
       }
       .ligne_point .point:nth-child(5) {
-        animation: lol 3s 100ms 3 ease-in-out;
+        animation: loader 3s 100ms 3 ease-in-out;
       }
       .ligne_point .point:nth-child(4) { 
-        animation: lol 3s 200ms 3 ease-in-out;
+        animation: loader 3s 200ms 3 ease-in-out;
       }
       .ligne_point .point:nth-child(3) {  
-        animation: lol 3s 300ms 3 ease-in-out;
+        animation: loader 3s 300ms 3 ease-in-out;
       }
       .ligne_point .point:nth-child(2) { 
-        animation: lol 3s 400ms 3 ease-in-out;
+        animation: loader 3s 400ms 3 ease-in-out;
       }
       .ligne_point .point:nth-child(1) { 
-        animation: lol 3s 500ms 3 ease-in-out;
+        animation: loader 3s 500ms 3 ease-in-out;
       }
-      @keyframes lol {
+      @keyframes loader {
         0% {
           opacity: 0;
           transform: translateX(-50px);
@@ -99,15 +100,15 @@ body{
         color: black;
     }
 }
-.restaurants, footer, .localisation, .box_fonction{
-    animation: ground 1s linear 3s 1 both;
+.restaurants, footer, .localisation, .box_fonction, .block1, .logo{
+    animation: ground 2s ease-out 3.5s 1 both;
 }
 @keyframes ground {
     from {
         opacity: 0; 
     }
     to {
-       display: inline;   
+       opacity: 1;   
     }
   }
 .logo{
@@ -154,28 +155,38 @@ svg{
     }
        
     }
+}
     .bouton{
         font-family:$font_thin;
-        background-image:linear-gradient($couleur_secondaire 8%,  $couleur_primaire );
+        background-image:$degrade;
         width: 200px;
         height: 40px; 
         border-radius: 25px;
         border: none;
         box-shadow: $shadow;
-        margin: 25px auto  30px auto; 
-    @if (lightness($couleur_primaire) > 50%)
-    {
-        color:white;
+        margin: 25px auto  30px auto;
+        cursor: pointer; 
+        transition:0.3s;
+            @if (lightness($couleur_primaire) > 50%) {
+                color:white;
+                }
+                @else {
+                color: black;
+                }
+                p{
+                    font-family:$font_light;
+                    font-size: 12px;
+                    text-align: center;
+                    margin: 0px;
+                    padding-top: 10px;
+                }
+                &:hover{
+                    background:  $hover_bouton_couleur;
+                    box-shadow: $hover_bouton_shadow 
+                    
+                    } 
         }
-        @else {
-        color: black;
-        }
-        p{
-           padding: 10px;
-          
-        }
-    }
-}
+      
 .box_fonction{
     font-family: "Roboto_bold";
     padding: 15px auto; 
@@ -281,7 +292,7 @@ svg{
     background-image:linear-gradient(to bottom, $couleur_secondaire 27%,$couleur_primaire 83%);
     -webkit-text-fill-color:transparent;
     -webkit-background-clip:text;
-    animation: test 0.5s ease-in-out;
+    animation: test 0.5s ease-in;
     }
 @keyframes test {
         0%{
