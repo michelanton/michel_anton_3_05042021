@@ -37,7 +37,7 @@
 $couleur_primaire:#9356dc;
 $couleur_secondaire:#ff79da;
 $couleur_tertiaire:#99e2d0;
-$degrade:gradient($couleur_secondaire, $couleur_primaire);
+$degrade:linear-gradient(to bottom, rgba(255,121,218,1) 1%,rgba(147,86,220,1) 100%,rgba(147,86,220,1) 100%,rgba(147,86,220,1) 100%); 
 $couleur_gris:#e4e0e0;
 $couleur_blanc:white;
 $couleur_loge: black;

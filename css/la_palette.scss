@@ -6,7 +6,7 @@ body{
   padding: 0px;
 }
 
-      
+
 .logo{
     text-align: center;
    padding: 20px 0px 10px 0px;
@@ -21,11 +21,11 @@ body{
     background-color: $couleur_gris;
     padding-top: 10px;
     padding-bottom: 40px;
-    
+
   }
 .tete{ position: relative;
  .image_carte{
- 
+
     img{
         width: 100%;
     } 
@@ -38,7 +38,7 @@ body{
     background-color: $couleur_gris;
     border-top-left-radius:20px;
     border-top-right-radius: 20px;
- 
+
     h1{ 
         margin: 10px 40px 10px 15px;
         font-family: $font_Shrikhand, 'Courier New', Courier, monospace;
@@ -50,28 +50,65 @@ body{
     position: absolute;
     right: 30px;
     top: 10px;
-    font-size: 25px;
-    .fas{
-        display: none;
-        color: $couleur_secondaire;
-        }
+    
+    
     } 
-          
+    .far{
+        font-size: 30px;
+        color:black;
+        
+    }
+    .fas{
+        display:none;
+        font-size: 30px;
+        background-image:linear-gradient(to bottom, $couleur_secondaire 27%,$couleur_primaire 83%);
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip:text;
+    animation: test 0.5s ease-in-out;
+    }
+    .coeur:active{
+      .far{display: none;}
+      .fas{display: inline;
+    }
     }
     
+
+    @keyframes test {
+        0%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 27%,rgba(216,109,219,0) 47%,rgba(185,99,219,0) 63%,rgba(147,86,220,0.54) 83%,rgba(147,86,220,1) 100%);
+        }
+        20%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 27%,rgba(230,113,218,0) 40%,rgba(147,86,220,0.72) 83%,rgba(147,86,220,1) 100%);
+        }
+        40%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 21%,rgba(255,121,218,0.08) 27%,rgba(147,86,220,0.79) 83%,rgba(147,86,220,1) 100%);
+        }
+        60%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0.09) 9%,rgba(255,121,218,0.27) 27%,rgba(147,86,220,0.83) 83%,rgba(147,86,220,1) 100%);
+        }
+        80%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0.09) 0%,rgba(255,121,218,0.34) 27%,rgba(147,86,220,0.85) 83%,rgba(147,86,220,1) 100%);
+        }
+        100%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,1) 27%,rgba(147,86,220,1) 83%);
+        }
+    }
+
+    }
+
 .menu{
-    position: relative;
+        position: relative;
      margin-left: 10px;
-     
-        
+
      h3{
      font-family:  $font_regular;
      text-transform: uppercase;
      font-size: 11px;
      margin:20px 0px 30px 10px
     }
+        
+    }
     
- }
 .ligne{
     position: absolute;
     top: 20px;
@@ -81,6 +118,8 @@ body{
  }
 .titre_menu{
     position: relative;
+    
+    
     background-color: white;
     width: 90%;
     height: 40px;
@@ -90,33 +129,60 @@ body{
     box-shadow:  $shadow;
     cursor: pointer;
     overflow: hidden;
+    animation: menu 0.8s ease-out;
+   
+      }
+     
+   
 
-    .selection_menu{
-        display: none;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        height: 100%;
-        width: 50px;
-        background-color:$couleur_tertiaire ;
+      @keyframes menu {
+        from{
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
+        @keyframes textmenu {
+            from{
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+    } 
+
+
+    
     h3{
         font-family: $font_bold;
         font-size: 12px;
         margin: 0px 0px 3px 10px;
         padding-top: 6px;
+        
     }
     h4{
         font-family: $font_bold;
         font-size: 11px;
         margin: 0px 0px 2px 10px;
         padding-top: 6px;
+        
+        animation: textmenu 0.8s ;
     }
     p{
         font-family:  $font_regular;
         margin: 0px 0px 0px 10px;
         font-size: 11px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: 0.3s textmenu ;
     }
+    
     .prix{
         position: absolute;
         right: 10px;
@@ -124,6 +190,7 @@ body{
         font-family: $font_bold;
         font-size: 12px;
         cursor: pointer;
+        animation: 1s textmenu ;
     }
     .choix{
         display: inline;
@@ -133,36 +200,52 @@ body{
         width: 40px;
         height: 100%;
         text-align: center;
+        color: white;
         line-height: 2.5;
         border-top-right-radius: $radius1;
         border-bottom-right-radius: $radius1;
         background-color: darken($color: $couleur_tertiaire, $amount: 10);
-      
-      
+
+
     }
-    
-}
 .titre_menu:hover{
-   
-    
+
+
     .prix{
         margin-right: 40px;
-        transition: 2s;
+        transition: margin-right 0.3s ease-out;
+        
     }
 .choix{
     display: inline;
-    transform: translateX(-40px) ;
-    transition: 0.8s;
+   transform: translateX(-40px);
+   transition: 0.5s;
 }
 .choix i{
-    color: $couleur_blanc;
-    transform: rotate(1turn);
-    transition: transform 0.5s;
+   
+    animation: 0.4s ease-in-out  0.1s anim-icon ;
+
 }
+p{
+    margin-right: 80px;
+    transition: 0.2s;
 }
-    
+
+}
+@keyframes anim-icon {
+    from{
+        transform: rotate(-0.8turn) ;
+       
+    }
+    to{
+        transform: rotate(0) ;
+       
+    }
+}
+
+
 .bouton{
- 
+
     font-family:   $font_regular;
     background-image:linear-gradient($couleur_secondaire, $couleur_primaire);
     width: 140px;
@@ -171,8 +254,8 @@ body{
     border: none;
     box-shadow: $shadow;
     margin: 30px auto  00px auto;
- 
-  
+
+
     @if (lightness($couleur_primaire) > 50%) {
         color:white;
         }
@@ -187,6 +270,12 @@ body{
          padding-top: 10px;
         }
 }
+.bouton:hover{
+    /*filter: brightness(1.2);*/
+    background-image:linear-gradient(#ff9ae2,#a472e0);
+    box-shadow: 2px 2px 8px#535353;
+    transition: 0.3s;
+}
 
 
 
@@ -197,7 +286,7 @@ body{
     .logo{ 
         text-align: left;
         padding: 10px 0px 0px 30px;
-       
+
         svg{ 
             width: 90px;
             height: 40px; 
@@ -216,14 +305,14 @@ body{
 
 .cadre_footer{
     background-color:$couleur_footer;
- 
+
 }
 .list_footer{
     list-style-type: none;
     font-size: 12px;
     color: $couleur_txt_footer;
     padding: 0px 0px 20px 30px;
-   
+
     margin: 0px;
     @if (lightness($couleur_footer) < 50%) {
         color:white;

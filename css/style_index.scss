@@ -1,6 +1,96 @@
-@import "css/page_import.scss";
+@import "page_import.scss";
 
 
+
+.loader{
+    opacity: 1;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(255,121,218,1) 1%,rgba(147,86,220,1) 100%,rgba(147,86,220,1) 100%,rgba(147,86,220,1) 100%);
+    width: 100%;
+    height: 100%;
+  
+    animation: ground2 1.5s linear 3s 1 both;
+
+.logo_loader{
+    text-align: center;
+    padding: 20px 0px 10px 0px;
+    svg{
+        width: 50%;
+      fill: black;
+    }
+    }
+    .txt_loader p{
+            text-align: center;
+            font-family: $font_thin;
+            font-size: 14px;
+    }
+
+  @keyframes ground2 {
+    from {
+        transform: translateX(0px);
+      
+    }
+    to {
+        
+        transform: translateX(1000px);
+    }
+    
+    }
+    .point{
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: $couleur_tertiaire;
+        border-radius: 50%;
+        border: 1px solid $couleur_primaire;
+        opacity: 0;
+    }
+    .ligne_point {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 150px;
+        width: calc(100% - 200px);
+        padding: 0 100px;
+        text-align: center;
+      }
+    .ligne_point .point:nth-child(6) { 
+        animation: lol 3s 3 ease-in-out;
+      }
+      .ligne_point .point:nth-child(5) {
+        animation: lol 3s 100ms 3 ease-in-out;
+      }
+      .ligne_point .point:nth-child(4) { 
+        animation: lol 3s 200ms 3 ease-in-out;
+      }
+      .ligne_point .point:nth-child(3) {  
+        animation: lol 3s 300ms 3 ease-in-out;
+      }
+      .ligne_point .point:nth-child(2) { 
+        animation: lol 3s 400ms 3 ease-in-out;
+      }
+      .ligne_point .point:nth-child(1) { 
+        animation: lol 3s 500ms 3 ease-in-out;
+      }
+      @keyframes lol {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        33% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        66% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+      }
+    
+}
 body{
     margin: 0px;
     padding: 0px;
@@ -9,6 +99,17 @@ body{
         color: black;
     }
 }
+.restaurants, footer, .localisation, .box_fonction{
+    animation: ground 1s linear 3s 1 both;
+}
+@keyframes ground {
+    from {
+        opacity: 0; 
+    }
+    to {
+       display: inline;   
+    }
+  }
 .logo{
   text-align: center;
  padding: 20px 0px 10px 0px;
@@ -21,50 +122,49 @@ svg{
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
-.localisation{
-    background-color:darken($color: $couleur_gris, $amount: 10);
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 50px;
-    justify-content: center;
-    align-items: center;
+    .localisation{
+        background-color:darken($color: $couleur_gris, $amount: 10);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
    .txt-entete{
-    margin: 800px 80px;
-   }
-form input{
+        margin: 800px 80px;
+    }
+    form input{
     margin-left: 20px;
     background-color:darken($color: $couleur_gris, $amount: 10);
     border: none; 
     padding: 10px;
     
-}
-}
-.txt_entete{
-  h1{ margin: 20px 40px 10px 40px;
-    font-family:$font_black;
-font-size: 20px;
-}
-    p{margin: 10px 40px 20px 40px;
+    }
+    }
+    .txt_entete{
+    h1{ margin: 20px 40px 10px 40px;
+        font-family:$font_black;
+        font-size: 20px;
+    }
+    p{
+        margin: 10px 40px 20px 40px;
         font-size: 14px;
         font-family:$font_light;
     }
        
-}
-.bouton{
- 
-    font-family:    $font_thin;
-    background-image:linear-gradient($couleur_secondaire 8%,  $couleur_primaire );;
-
-    width: 200px;
-    height: 40px; 
-    border-radius: 25px;
-    border: none;
-    box-shadow: $shadow;
-    margin: 25px auto  30px auto; 
-  
-    @if (lightness($couleur_primaire) > 50%) {
+    }
+    .bouton{
+        font-family:$font_thin;
+        background-image:linear-gradient($couleur_secondaire 8%,  $couleur_primaire );
+        width: 200px;
+        height: 40px; 
+        border-radius: 25px;
+        border: none;
+        box-shadow: $shadow;
+        margin: 25px auto  30px auto; 
+    @if (lightness($couleur_primaire) > 50%)
+    {
         color:white;
         }
         @else {
@@ -74,22 +174,20 @@ font-size: 20px;
            padding: 10px;
           
         }
-}
+    }
 }
 .box_fonction{
-    font-family: "Roboto_bold"; 
-    padding: 15px 0px; 
-.txt_fonction{
-    font-family:$font_black;
-    font-size: 20px;
-    margin:10px auto;
-    padding-left: 10%;
-}
-ol{
-    padding: 0px;
-}
-
-
+    font-family: "Roboto_bold";
+    padding: 15px auto; 
+    .txt_fonction{
+        font-family:$font_black;
+        font-size: 20px;
+        margin:10px auto;
+        padding-left: 10%;
+    }
+    ol{
+        padding: 0px;
+    }
 }
 .fonc{ 
     position: relative;
@@ -102,23 +200,23 @@ ol{
     box-shadow: $shadow;
     padding-top: 17px ;
     list-style-type: none;
-  i{
-      position: absolute;
-    left: 25px;
-    top: 18px;
-    margin-right: 15px;
-  }
-  svg{
-      position:absolute;
-      fill: darken($color: $couleur_primaire, $amount: 20);
-      left: -10px;
-  }
-  p{
-      margin: 0px 0px 0px 55px;
-  }
-    &.fonc1, &.fonc2{background-color: $couleur_gris;
+    i{
+        position: absolute;
+        left: 25px;
+        top: 18px;
+        margin-right: 15px;
     }
-    &.fonc3{ background-color:lighten($color: $couleur_primaire, $amount: 20);  
+    svg{
+        position:absolute;
+        fill: darken($color: $couleur_primaire, $amount: 20);
+        left: -10px;
+    }
+    p{
+        margin: 0px 0px 0px 55px;
+    }
+        &.fonc1, &.fonc2{background-color: $couleur_gris;
+    }
+        &.fonc3{ background-color:lighten($color: $couleur_primaire, $amount: 20);  
       }
 }
 .restaurants{
@@ -134,49 +232,77 @@ ol{
     position: relative;
     width: 85%;
     height: 200px;
-    margin:20px 20px;
+    margin:20px auto;
     border: none;
     border-radius: 10px;
     overflow: hidden;
  
-.txt_cadre{
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    height: 50px;
-    bottom: 0px;
-    line-height: 10px;
-} 
-p{
-   
-    font-size: 10px;
-    margin: 8px 0px 10px 10px;
-    font-family:$font_regular;
-} 
-h4{
-    font-family:  $font_bold;
-    font-size: 12px;
-    margin: 10px 0px 0px 10px;
+    .txt_cadre{
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        bottom: 0px;
+        line-height: 10px;
+    } 
+    p{
+        font-size: 10px;
+        margin: 8px 0px 10px 10px;
+        font-family:$font_regular;
+    } 
+    h4{
+        font-family:  $font_bold;
+        font-size: 12px;
+        margin: 10px 0px 0px 10px;
+    }
+    img{
+        width: 100%;
+        object-position: 0px -30px;
+    }
+    .coeur{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .coeur:hover{
+        cursor: pointer;
+        .far{display: none;}
+        .fas{display: inline;
+    }
+    }
 }
-img{
-    width: 100%;
-    object-position: 0px -30px;
+.coeur .far{
+    font-size: 16px;
+    color:black;  
 }
-.coeur {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-.coeur  :hover{
-    cursor: pointer;
-    .far{ display: none;}
-}
-.fas{
-    display: none;
-}
-}
-
-
+.coeur .fas{
+    display:none;
+    font-size:16px;
+    background-image:linear-gradient(to bottom, $couleur_secondaire 27%,$couleur_primaire 83%);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip:text;
+    animation: test 0.5s ease-in-out;
+    }
+@keyframes test {
+        0%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 27%,rgba(216,109,219,0) 47%,rgba(185,99,219,0) 63%,rgba(147,86,220,0.54) 83%,rgba(147,86,220,1) 100%);
+        }
+        20%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 27%,rgba(230,113,218,0) 40%,rgba(147,86,220,0.72) 83%,rgba(147,86,220,1) 100%);
+        }
+        40%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 21%,rgba(255,121,218,0.08) 27%,rgba(147,86,220,0.79) 83%,rgba(147,86,220,1) 100%);
+        }
+        60%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0.09) 9%,rgba(255,121,218,0.27) 27%,rgba(147,86,220,0.83) 83%,rgba(147,86,220,1) 100%);
+        }
+        80%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,0.09) 0%,rgba(255,121,218,0.34) 27%,rgba(147,86,220,0.85) 83%,rgba(147,86,220,1) 100%);
+        }
+        100%{
+            background-image:linear-gradient(to bottom, rgba(255,121,218,1) 27%,rgba(147,86,220,1) 83%);
+        }
+    }
 footer{
     margin: 0%;
     padding: 0%;
@@ -184,23 +310,22 @@ footer{
         text-align: left;
         padding: 10px 0px 0px 30px;
        
-        svg{ 
-            width: 90px;
-            height: 40px; 
-        @if (lightness($couleur_footer) > 50%) {
-            fill: black;
+    svg{ 
+        width: 90px;
+        height: 40px; 
+    @if (lightness($couleur_footer) > 50%) {
+        fill: black;
             }
-            @else {
-            fill:#ffffff;
+    @else {
+        fill:#ffffff;
             }
         }
         ul{
             list-style-type: none;
         }}
-    }
+}
 .cadre_footer{
     background-color:$couleur_footer;
- 
 }
 .list_footer{
     list-style-type: none;
@@ -211,17 +336,15 @@ footer{
     @if (lightness($couleur_footer) < 50%) {
         color:white;
         }
-        @else {
+    @else {
         color: black;
         }
         i{
             margin-right: 10px;
-            font-size: 10px ;
-            
+            font-size: 10px ;  
         }
         li{
             padding-bottom: 10px;
-            font-size: 14px;
-           
+            font-size: 14px;  
         }
 }
