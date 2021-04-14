@@ -207,10 +207,11 @@ a {
 
 .ligne {
   position: absolute;
-  top: 20px;
-  width: 30px;
-  height: 10px;
-  color: black;
+  top: 33px;
+  width: 60px;
+  height: 4px;
+  margin: 0px 0px 0px 17px;
+  background-color: #99e2d0;
 }
 
 .titre_menu {
@@ -282,6 +283,7 @@ a {
 
 .txt_menu h3 {
   font-size: 20px;
+  margin: 0px 0px 20px 17px;
 }
 
 h3 {
@@ -486,6 +488,9 @@ footer .logo ul {
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 @media screen and (max-width: 960px) {
+  .titre_menu {
+    height: 100px;
+  }
   .menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -508,7 +513,7 @@ footer .logo ul {
   }
   .prix {
     font-size: 22px;
-    top: 75px;
+    top: 60px;
   }
   .one {
     left: 0%;
@@ -539,6 +544,7 @@ footer .logo ul {
     left: 0px;
   }
   .txt_menu h3 {
+    margin: 0px 0px 15px 17px;
     font-size: 22px;
   }
   .choix {
@@ -579,6 +585,10 @@ footer .logo ul {
   }
   .txt_menu h3 {
     font-size: 20px;
+  }
+  .ligne {
+    width: 50px;
+    height: 3px;
   }
   h4 {
     font-size: 22px;

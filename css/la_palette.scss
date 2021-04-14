@@ -125,15 +125,16 @@ a{
         display: flex;
         flex-direction: column;
         width: 33%;
-    margin: 0px auto;
+        margin: 0px auto;
     }
     
 .ligne{
     position: absolute;
-    top: 20px;
-    width: 30px;
-    height: 10px;
-    color: black;
+    top: 33px;
+    width: 60px;
+    height: 4px;
+    margin: 0px 0px 0px 17px;
+    background-color: $couleur_tertiaire;
  }
 .titre_menu{
     position: relative;
@@ -169,6 +170,7 @@ a{
     } 
     .txt_menu h3{
         font-size: 20px;
+        margin: 0px 0px 20px 17px;
     }    
   h3{
         font-family: $font_bold;
@@ -368,10 +370,12 @@ p{
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 @media screen and (max-width: 960px) {   
- 
+ .titre_menu{
+     height: 100px;
+ }
     .menu{  
       flex-direction: column;
-   
+
     }
     .menu_1, .menu_2, .menu_3{
         width: 70%;
@@ -390,7 +394,7 @@ p{
    }
    .prix{
     font-size: 22px; 
-    top: 75px;
+    top: 60px;
    }
 
 .one {
@@ -422,7 +426,7 @@ left: 0%;
         left: 0px;
     }
     .txt_menu h3{
-  
+  margin: 0px 0px 15px 17px;
         font-size:22px ;
     } 
     .choix{
@@ -467,7 +471,10 @@ left: 0%;
   
         font-size:20px ;
     } 
-   
+    .ligne{
+        width: 50px;
+        height: 3px;
+    }
     h4{
         font-size: 22px;
         margin-top: 10px;
