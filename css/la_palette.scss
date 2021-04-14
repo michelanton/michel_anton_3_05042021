@@ -2,28 +2,45 @@
 
 
 body{
-  margin: 0px;
-  padding: 0px;
+    max-width: 1080px;
+    min-width: 270px;
+    margin: 0px auto;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 
-
 .logo{
+    position: relative;
+    width: 100%;
+   
     text-align: center;
    padding: 20px 0px 10px 0px;
   svg{
+    width: 30%;
+    height: 30%;
       fill: black;
   }
   i{
-      vertical-align: middle;
+      position: absolute;
+      left: 30px;
+    top: 35%;
+      font-size: 30px;
+ 
   }
 }
 #carte{
     background-color: $couleur_gris;
     padding-top: 10px;
     padding-bottom: 40px;
+    margin: 0px;
 
   }
-.tete{ position: relative;
+
+.tete{ 
+    position: relative;
  .image_carte{
 
     img{
@@ -34,33 +51,34 @@ body{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 30px;
+   
     background-color: $couleur_gris;
     border-top-left-radius:20px;
     border-top-right-radius: 20px;
 
     h1{ 
-        margin: 10px 40px 10px 15px;
+        margin: 20px 40px 10px 40px;
         font-family: $font_Shrikhand, 'Courier New', Courier, monospace;
-        font-size: 20px;
+        font-size: 34px;
         font-weight: normal;   
     } 
 }
 .coeur {
     position: absolute;
-    right: 30px;
-    top: 10px;
+    right: 104px;
+    top: 22px;
+   
     
     
     } 
     .far{
-        font-size: 30px;
+        font-size: 40px;
         color:black;
         
     }
     .fas{
         display:none;
-        font-size: 30px;
+        font-size: 39px;
         background-image:linear-gradient(to bottom, $couleur_secondaire 27%,$couleur_primaire 83%);
         -webkit-text-fill-color:transparent;
         -webkit-background-clip:text;
@@ -95,18 +113,19 @@ body{
     }
 
     }
-
-.menu{
-        position: relative;
-     margin-left: 10px;
-
-     h3{
-     font-family:  $font_regular;
-     text-transform: uppercase;
-     font-size: 11px;
-     margin:20px 0px 30px 10px
+    .menu{  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      
+     
     }
-        
+.menu_1, .menu_2, .menu_3{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+    margin: 0px auto;
     }
     
 .ligne{
@@ -118,23 +137,16 @@ body{
  }
 .titre_menu{
     position: relative;
-    
-    
     background-color: white;
-    width: 90%;
-    height: 40px;
+    height: 130px;
     margin: 10px 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
     box-shadow:  $shadow;
     cursor: pointer;
     overflow: hidden;
     animation: menu 0.8s ease-out;
-   
-      }
-     
-   
-
+}
       @keyframes menu {
         from{
             opacity: 0;
@@ -155,82 +167,103 @@ body{
                 transform: translateY(0px);
             }
     } 
-
-
-    
-    h3{
+    .txt_menu h3{
+        font-size: 20px;
+    }    
+  h3{
         font-family: $font_bold;
         font-size: 12px;
         margin: 0px 0px 3px 10px;
         padding-top: 6px;
         
+        
     }
     h4{
         font-family: $font_bold;
-        font-size: 11px;
-        margin: 0px 0px 2px 10px;
+        font-size: 20px;
+       
+        margin: 10px 0px 2px 20px;
         padding-top: 6px;
-        
+        padding-right: 20px;
+       
+        overflow: hidden;
         animation: textmenu 0.8s ;
     }
     p{
         font-family:  $font_regular;
-        margin: 0px 0px 0px 10px;
-        font-size: 11px;
-        text-overflow: ellipsis;
+        margin: 0px 60px 0px 20px;
+        font-size: 18px;
+        line-height: 1.2;
+        
+        padding-right: 10px;
+      
         overflow: hidden;
-        white-space: nowrap;
         animation: 0.3s textmenu ;
     }
     
     .prix{
         position: absolute;
-        right: 10px;
-        top: 20px;
+        right:0px;
+        top: 70px;
+       
+        margin: 0px 20px 0px 10px;
         font-family: $font_bold;
-        font-size: 12px;
+        font-size: 24px;
         cursor: pointer;
         animation: 1s textmenu ;
     }
     .choix{
-        display: inline;
+       
+
         position: absolute;
-        right: -40px;
-        top: 00px;
-        width: 40px;
+        right: -80px;
+        top: 0px;
+        width: 80px;
         height: 100%;
+    
         text-align: center;
+        font-size: 30px;
         color: white;
-        line-height: 2.5;
+        line-height: 4;
         border-top-right-radius: $radius1;
         border-bottom-right-radius: $radius1;
         background-color: darken($color: $couleur_tertiaire, $amount: 10);
-
-
+       
     }
 .titre_menu:hover{
 
 
     .prix{
-        margin-right: 40px;
-        transition: margin-right 0.3s ease-out;
+        animation: 0.45s ease-in  0s choix both;
         
     }
 .choix{
-    display: inline;
-   transform: translateX(-40px);
-   transition: 0.5s;
+   
+    animation: 0.5s ease-out  0s choix both;
 }
 .choix i{
    
-    animation: 0.4s ease-in-out  0.1s anim-icon ;
+    animation: 0.38s ease-in-out  0.15s anim-icon ;
 
+}
+h4{
+    margin-right: 60px;
 }
 p{
-    margin-right: 80px;
-    transition: 0.2s;
+    margin-right: 140px;
+   
 }
 
+}
+@keyframes choix {
+    from{
+        transform: translateX(0px)  ;
+       
+    }
+    to{
+        transform: translateX(-80px)  ;
+       
+    }
 }
 @keyframes anim-icon {
     from{
@@ -248,8 +281,8 @@ p{
 
     font-family:   $font_regular;
     background-image:$degrade;
-    width: 140px;
-    height: 35px; 
+    width: 260px;
+    height: 55px; 
     border-radius: 25px;
     border: none;
     box-shadow: $shadow;
@@ -270,10 +303,10 @@ p{
                 }  
         p{
             font-family:$font_light;
-            font-size: 12px;
+            font-size: 20px;
             text-align: center;
             margin: 0px;
-            padding-top: 10px;
+            line-height: 2.6;
         }
         
         
@@ -290,8 +323,8 @@ p{
         padding: 10px 0px 0px 30px;
 
         svg{ 
-            width: 90px;
-            height: 40px; 
+            width: 150px;
+            height: 60px; 
         @if (lightness($couleur_footer) > 50%) {
             fill: black;
             }
@@ -311,7 +344,7 @@ p{
 }
 .list_footer{
     list-style-type: none;
-    font-size: 12px;
+    font-size: 18px;
     color: $couleur_txt_footer;
     padding: 0px 0px 20px 30px;
 
@@ -328,4 +361,307 @@ p{
         li{
             padding-bottom: 10px;
         }
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 960px) {   
+ 
+    .menu{  
+      flex-direction: column;
+   
+    }
+    .menu_1, .menu_2, .menu_3{
+        width: 70%;
+        margin: 20px 0px;
+   } 
+   .txt_menu h3{
+  
+       font-size:22px ;
+   } 
+   h4{
+       font-size: 22px;
+       margin-top: 10px;
+   }
+   p{
+       font-size: 20px;
+   }
+   .prix{
+    font-size: 22px; 
+    top: 75px;
+   }
+
+.one {
+left: 0%;
+}
+.two{
+    left: 20% ;
+}
+.three{
+    left: 40% ;
+}
+
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 700px) { 
+    .menu_1, .menu_2, .menu_3{
+        width: 100%;
+   }   
+    .titre_menu{
+        width: 95%;
+        height: 100px;
+        margin: 15px auto;
+    }
+    .one, .two, .three{
+        left: 0px;
+    }
+    .txt_menu h3{
+  
+        font-size:22px ;
+    } 
+    .choix{
+        line-height: 3.4;
+    }
+    .tete .coeur {
+        right: 55px;
+    }
+    h4{
+        font-size: 26px;
+        margin-top: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      
+    }
+    p{
+        font-size: 22px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+       
+    }
+    .prix{
+     font-size: 24px; 
+     top: 50px;
+    }
+    
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 560px) { 
+    .titre_menu{
+        width: 95%;
+        height: 90px;
+        margin: 15px auto;
+    }
+    .txt_menu h3{
+  
+        font-size:20px ;
+    } 
+   
+    h4{
+        font-size: 22px;
+        margin-top: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      
+    }
+    p{
+        font-size: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+       
+    }
+    .prix{
+     font-size: 22px; 
+     top: 50px;
+    }
+    .choix{
+        line-height: 3.2;
+    }
+   
+
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 520px) { 
+    .tete .titre_carte{
+       
+        h1{
+            font-size: 30px;
+            margin-left: 10px;
+        }
+    }
+    .tete .coeur {
+        top: 22px;
+        right: 55px;
+        .far{
+            font-size: 35px;
+          
+            
+        }
+        .fas{
+            font-size: 34px;
+    }
+}
+.choix{
+    line-height: 3;
+}
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 470px) {
+    .titre_menu{
+    
+        height: 80px;
+       
+    } 
+    h4{
+        font-size: 20px;
+    }
+    p{
+        font-size: 18px;
+    }
+    .prix{
+        font-size: 20px; 
+        top: 40px;
+       }
+    .choix{
+        line-height: 2.8;
+        right: -70px;
+        width: 70px;
+    }
+    @keyframes choix {
+        from{
+            transform: translateX(0px)  ;
+           
+        }
+        to{
+            transform: translateX(-70px)  ;
+           
+        }
+    }
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 420px) {
+    .tete .titre_carte{
+       
+        h1{
+            font-size: 28px;
+        
+        }
+    }
+    .tete .coeur {
+        right: 30px;
+}
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 360px) {
+    .tete .titre_carte{
+       
+        h1{
+            font-size: 26px;
+            margin-left: 10px;
+        }
+    }
+    .tete .coeur {
+        top: 27px;
+        right: 27px;
+        .far{
+            font-size: 28px;
+          
+            
+        }
+        .fas{
+            font-size: 28px;
+    }
+}
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 320px) {
+    .tete .titre_carte{
+       
+        h1{
+            font-size: 24px;
+          
+        }
+    }
+    .tete .coeur {
+        top: 25px;
+        right: 27px;
+        .far{
+            font-size: 24px;
+          
+            
+        }
+        .fas{
+            font-size: 23px;
+    }
+    }
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 300px) {
+    .tete .titre_carte{
+       
+        h1{
+            font-size: 22px;
+          
+        }
+    }
+    .tete .coeur {
+        top: 26px;
+        
+        .far{
+            font-size: 22px;
+          
+            
+        }
+        .fas{
+            font-size: 21px;
+    }
+    } 
+}
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 270px) {
+.tete .coeur {
+    top: 25px;
+    right: 18px;
+}
 }

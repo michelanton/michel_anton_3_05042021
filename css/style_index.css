@@ -63,24 +63,24 @@
 
 @-webkit-keyframes ground2 {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
   to {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
+    -webkit-transform: translatey(1000px);
+            transform: translatey(1000px);
     opacity: 0;
   }
 }
 
 @keyframes ground2 {
   from {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
   }
   to {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
+    -webkit-transform: translatey(1000px);
+            transform: translatey(1000px);
     opacity: 0;
   }
 }
@@ -227,7 +227,7 @@ body a {
 
 .block1 {
   background-color: #e4e0e0;
-  width: 750px;
+  width: 95%;
   text-align: center;
   margin: 0px auto;
   padding-bottom: 10px;
@@ -312,8 +312,20 @@ body a {
           box-shadow: 2px 4px 9px #616060;
 }
 
+.box_fonc_rest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 .box_fonction {
-  margin-bottom: 20px;
+  width: 30%;
+  margin-left: 20px;
   padding-bottom: 30px;
 }
 
@@ -324,7 +336,7 @@ body a {
 .txt_fonction {
   font-family: "Roboto_black";
   font-size: 28px;
-  margin: 30px auto;
+  margin: 50px auto;
   text-align: center;
   padding: 0%;
 }
@@ -334,7 +346,7 @@ body a {
   width: 350px;
   height: 80px;
   font-size: 14px;
-  margin: 20px auto;
+  margin: 50px auto;
   border: none;
   border-radius: 20px;
   -webkit-box-shadow: 2px 4px 9px #aaa8a8;
@@ -393,18 +405,18 @@ body a {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 60%;
   background-color: #e4e0e0;
   padding: 20px 0px 30px 0px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  margin: 10px 10px 0px 10px;
+  border-radius: 10px;
+  margin: 30px 10px 20px 30px;
 }
 
 .restaurants h3 {
   text-align: center;
   font-family: "Roboto_black";
-  font-size: 24px;
-  margin: 0px 0px 20px 0px;
+  font-size: 28px;
+  margin: 0px 0px 10px 0px;
 }
 
 .titre_box {
@@ -413,7 +425,7 @@ body a {
 
 .cadre_restau {
   position: relative;
-  width: 20%;
+  width: 40%;
   height: 250px;
   margin: 20px auto;
   border: none;
@@ -445,50 +457,50 @@ body a {
 }
 
 .cadre_restau p {
-  font-size: 12px;
+  font-size: 14px;
   margin: 8px 0px 10px 10px;
   font-family: "Roboto_regular";
 }
 
 .cadre_restau h4 {
   font-family: "Roboto_bold";
-  font-size: 14px;
-  margin: 10px 0px 0px 10px;
+  font-size: 16px;
+  margin: 17px 0px 0px 10px;
 }
 
 .cadre_restau .image_cadre1 img {
   position: absolute;
   right: -39px;
   top: -5px;
-  width: 154%;
+  width: 128%;
 }
 
 .cadre_restau .image_cadre2 img {
   position: absolute;
-  right: -94px;
-  top: -42px;
-  width: 173%;
+  right: -55px;
+  top: -50px;
+  width: 146%;
 }
 
 .cadre_restau .image_cadre3 img {
   position: absolute;
-  right: -131px;
-  top: -20px;
-  width: 167%;
+  right: -79px;
+  top: -36px;
+  width: 143%;
 }
 
 .cadre_restau .image_cadre4 img {
   position: absolute;
-  right: -131px;
-  top: -31px;
-  width: 167%;
+  right: -78px;
+  top: -35px;
+  width: 138%;
 }
 
 .cadre_restau .coeur {
   position: absolute;
-  font-size: 22px;
+  font-size: 26px;
   right: 20px;
-  top: 17px;
+  top: 15px;
 }
 
 .cadre_restau .coeur:hover {
@@ -625,48 +637,67 @@ footer .logo ul {
 /*--------------------@media query--------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1080px) {
   .fonc {
+    width: 300px;
     height: 60px;
   }
   .fonc .circle {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     top: 20px;
     font-size: 13px;
+    line-height: 2;
   }
   .fonc i {
-    font-size: 16px;
-    top: 22px;
+    font-size: 22px;
+    top: 18px;
   }
   .fonc p {
-    line-height: 2.9;
+    font-size: 16px;
+    line-height: 3.8;
+    margin-left: 30px;
   }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 1000px) {
   .cadre_restau {
     height: 220px;
   }
   .cadre_restau .txt_cadre {
     height: 50px;
   }
-  .cadre_restau .image_cadre1 img {
-    right: -71px;
-    top: -27px;
-    width: 190%;
+  .cadre_restau .txt_cadre h4 {
+    font-size: 16px;
+    margin: 10px 0px 0px 10px;
   }
-  .cadre_restau .image_cadre2 img {
-    right: -59px;
+  .cadre_restau .txt_cadre .coeur {
+    top: 8px;
+  }
+  .image_cadre1 img {
+    right: -25px;
+    top: -19px;
+    width: 129%;
+  }
+  .image_cadre2 img {
+    right: -21px;
     top: -25px;
-    width: 166%;
+    width: 124%;
   }
-  .cadre_restau .image_cadre3 img {
-    right: -88px;
-    top: -20px;
-    width: 167%;
+  .image_cadre3 img {
+    right: -52px;
+    top: -28px;
+    width: 133%;
   }
-  .cadre_restau .image_cadre4 img {
-    right: -86px;
+  .image_cadre4 img {
+    right: -32px;
     top: -9px;
-    width: 160%;
+    width: 119%;
   }
 }
 
@@ -676,46 +707,50 @@ footer .logo ul {
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 @media screen and (max-width: 930px) {
-  .txt_fonction {
-    font-size: 20px;
+  .fonc {
+    width: 250px;
+    height: 60px;
   }
-  .cadre_restau {
-    height: 200px;
-    line-height: 8px;
-  }
-  .cadre_restau .txt_cadre {
-    height: 50px;
-  }
-  .cadre_restau .txt_cadre h4 {
+  .fonc .circle {
+    width: 25px;
+    height: 25px;
+    top: 20px;
     font-size: 13px;
-    margin: 10px 0px 0px 10px;
+    line-height: 2;
   }
-  .cadre_restau .txt_cadre p {
-    margin: 5px 0px 10px 10px;
+  .fonc i {
+    left: 15px;
+    font-size: 20px;
+    top: 18px;
   }
-  .cadre_restau .txt_cadre .coeur {
-    top: 12px;
-    font-size: 18px;
+  .fonc p {
+    font-size: 16px;
+    line-height: 3.8;
+    margin-left: 30px;
+  }
+  .cadre_restau .coeur {
+    font-size: 22px;
+    top: 10px;
   }
   .cadre_restau .image_cadre1 img {
-    right: -71px;
-    top: -27px;
-    width: 190%;
+    right: -25px;
+    top: -8px;
+    width: 129%;
   }
   .cadre_restau .image_cadre2 img {
-    right: -59px;
-    top: -25px;
-    width: 166%;
+    right: -21px;
+    top: -15px;
+    width: 127%;
   }
   .cadre_restau .image_cadre3 img {
-    right: -88px;
-    top: -20px;
-    width: 167%;
+    right: -52px;
+    top: -16px;
+    width: 133%;
   }
   .cadre_restau .image_cadre4 img {
-    right: -86px;
-    top: -9px;
-    width: 160%;
+    right: -32px;
+    top: 0px;
+    width: 119%;
   }
 }
 
@@ -724,7 +759,7 @@ footer .logo ul {
 /*--------------------@media query--------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 870px) {
   .box_fonction {
     padding-bottom: 20px;
   }
@@ -746,32 +781,30 @@ footer .logo ul {
   }
   .cadre_restau .txt_cadre p {
     font-size: 11px;
-    margin: 3px 0px 10px 10px;
+    margin: 5px 0px 10px 10px;
   }
   .cadre_restau .txt_cadre .coeur {
     top: 10px;
-    right: 10px;
-    font-size: 16px;
   }
   .cadre_restau .image_cadre1 img {
-    right: -53px;
-    top: -27px;
-    width: 176%;
+    right: -15px;
+    top: -25px;
+    width: 124%;
   }
   .cadre_restau .image_cadre2 img {
-    right: -46px;
+    right: -22px;
     top: -30px;
-    width: 151%;
+    width: 119%;
   }
   .cadre_restau .image_cadre3 img {
-    right: -63px;
+    right: -35px;
     top: -24px;
-    width: 153%;
+    width: 124%;
   }
   .cadre_restau .image_cadre4 img {
-    right: -55px;
+    right: -11px;
     top: -9px;
-    width: 149%;
+    width: 112%;
   }
 }
 
@@ -810,23 +843,26 @@ footer .logo ul {
   }
   .cadre_restau .image_cadre1 img {
     right: -20px;
-    top: -82px;
+    top: -9px;
     width: 115%;
   }
   .cadre_restau .image_cadre2 img {
     right: -21px;
-    top: -60px;
+    top: -18px;
     width: 115%;
   }
   .cadre_restau .image_cadre3 img {
-    right: -63px;
-    top: -24px;
-    width: 153%;
+    right: -49px;
+    top: -38px;
+    width: 134%;
   }
   .cadre_restau .image_cadre4 img {
-    right: -55px;
-    top: -110px;
-    width: 129%;
+    right: -32px;
+    top: -24px;
+    width: 121%;
+  }
+  footer {
+    margin: 0px;
   }
 }
 
@@ -835,9 +871,22 @@ footer .logo ul {
 /*--------------------@media query--------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 740px) {
+  .box_fonc_rest {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .box_fonction {
+    width: 100%;
+    margin-left: 0px;
+  }
   .txt_fonction {
-    font-size: 28px;
+    font-size: 30px;
     margin: 30px 0px 20px 8%;
     text-align: left;
   }
@@ -868,14 +917,12 @@ footer .logo ul {
             flex-direction: column;
     border-radius: 0px;
     margin: 0px;
+    width: 100%;
   }
   .restaurants h3 {
     text-align: left;
-    font-size: 26px;
+    font-size: 30px;
     margin: 0px 0px 20px 8%;
-  }
-  footer {
-    margin: 0px;
   }
   .cadre_restau {
     width: 85%;

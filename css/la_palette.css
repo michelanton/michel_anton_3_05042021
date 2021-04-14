@@ -34,27 +34,42 @@
 }
 
 body {
-  margin: 0px;
+  max-width: 1080px;
+  min-width: 270px;
+  margin: 0px auto;
   padding: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .logo {
+  position: relative;
+  width: 100%;
   text-align: center;
   padding: 20px 0px 10px 0px;
 }
 
 .logo svg {
+  width: 30%;
+  height: 30%;
   fill: black;
 }
 
 .logo i {
-  vertical-align: middle;
+  position: absolute;
+  left: 30px;
+  top: 35%;
+  font-size: 30px;
 }
 
 #carte {
   background-color: #e4e0e0;
   padding-top: 10px;
   padding-bottom: 40px;
+  margin: 0px;
 }
 
 .tete {
@@ -69,33 +84,32 @@ body {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  height: 30px;
   background-color: #e4e0e0;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .tete .titre_carte h1 {
-  margin: 10px 40px 10px 15px;
+  margin: 20px 40px 10px 40px;
   font-family: "Shrikhand", "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-size: 34px;
   font-weight: normal;
 }
 
 .tete .coeur {
   position: absolute;
-  right: 30px;
-  top: 10px;
+  right: 104px;
+  top: 22px;
 }
 
 .tete .far {
-  font-size: 30px;
+  font-size: 40px;
   color: black;
 }
 
 .tete .fas {
   display: none;
-  font-size: 30px;
+  font-size: 39px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #ff79da), color-stop(83%, #9356dc));
   background-image: linear-gradient(to bottom, #ff79da 27%, #9356dc 83%);
   -webkit-text-fill-color: transparent;
@@ -167,15 +181,28 @@ body {
 }
 
 .menu {
-  position: relative;
-  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.menu h3 {
-  font-family: "Roboto_regular";
-  text-transform: uppercase;
-  font-size: 11px;
-  margin: 20px 0px 30px 10px;
+.menu_1, .menu_2, .menu_3 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33%;
+  margin: 0px auto;
 }
 
 .ligne {
@@ -189,11 +216,10 @@ body {
 .titre_menu {
   position: relative;
   background-color: white;
-  width: 90%;
-  height: 40px;
+  height: 130px;
   margin: 10px 10px;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   -webkit-box-shadow: 2px 4px 9px #aaa8a8;
           box-shadow: 2px 4px 9px #aaa8a8;
   cursor: pointer;
@@ -254,6 +280,10 @@ body {
   }
 }
 
+.txt_menu h3 {
+  font-size: 20px;
+}
+
 h3 {
   font-family: "Roboto_bold";
   font-size: 12px;
@@ -263,73 +293,96 @@ h3 {
 
 h4 {
   font-family: "Roboto_bold";
-  font-size: 11px;
-  margin: 0px 0px 2px 10px;
+  font-size: 20px;
+  margin: 10px 0px 2px 20px;
   padding-top: 6px;
+  padding-right: 20px;
+  overflow: hidden;
   -webkit-animation: textmenu 0.8s;
           animation: textmenu 0.8s;
 }
 
 p {
   font-family: "Roboto_regular";
-  margin: 0px 0px 0px 10px;
-  font-size: 11px;
-  text-overflow: ellipsis;
+  margin: 0px 60px 0px 20px;
+  font-size: 18px;
+  line-height: 1.2;
+  padding-right: 10px;
   overflow: hidden;
-  white-space: nowrap;
   -webkit-animation: 0.3s textmenu;
           animation: 0.3s textmenu;
 }
 
 .prix {
   position: absolute;
-  right: 10px;
-  top: 20px;
+  right: 0px;
+  top: 70px;
+  margin: 0px 20px 0px 10px;
   font-family: "Roboto_bold";
-  font-size: 12px;
+  font-size: 24px;
   cursor: pointer;
   -webkit-animation: 1s textmenu;
           animation: 1s textmenu;
 }
 
 .choix {
-  display: inline;
   position: absolute;
-  right: -40px;
-  top: 00px;
-  width: 40px;
+  right: -80px;
+  top: 0px;
+  width: 80px;
   height: 100%;
   text-align: center;
+  font-size: 30px;
   color: white;
-  line-height: 2.5;
+  line-height: 4;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: #71d7be;
 }
 
 .titre_menu:hover .prix {
-  margin-right: 40px;
-  -webkit-transition: margin-right 0.3s ease-out;
-  transition: margin-right 0.3s ease-out;
+  -webkit-animation: 0.45s ease-in  0s choix both;
+          animation: 0.45s ease-in  0s choix both;
 }
 
 .titre_menu:hover .choix {
-  display: inline;
-  -webkit-transform: translateX(-40px);
-          transform: translateX(-40px);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-animation: 0.5s ease-out  0s choix both;
+          animation: 0.5s ease-out  0s choix both;
 }
 
 .titre_menu:hover .choix i {
-  -webkit-animation: 0.4s ease-in-out  0.1s anim-icon;
-          animation: 0.4s ease-in-out  0.1s anim-icon;
+  -webkit-animation: 0.38s ease-in-out  0.15s anim-icon;
+          animation: 0.38s ease-in-out  0.15s anim-icon;
+}
+
+.titre_menu:hover h4 {
+  margin-right: 60px;
 }
 
 .titre_menu:hover p {
-  margin-right: 80px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  margin-right: 140px;
+}
+
+@-webkit-keyframes choix {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(-80px);
+            transform: translateX(-80px);
+  }
+}
+
+@keyframes choix {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(-80px);
+            transform: translateX(-80px);
+  }
 }
 
 @-webkit-keyframes anim-icon {
@@ -358,8 +411,8 @@ p {
   font-family: "Roboto_regular";
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ff79da), color-stop(100%, #9356dc), color-stop(100%, #9356dc), to(#9356dc));
   background-image: linear-gradient(to bottom, #ff79da 1%, #9356dc 100%, #9356dc 100%, #9356dc 100%);
-  width: 140px;
-  height: 35px;
+  width: 260px;
+  height: 55px;
   border-radius: 25px;
   border: none;
   -webkit-box-shadow: 2px 4px 9px #aaa8a8;
@@ -380,10 +433,10 @@ p {
 
 .bouton p {
   font-family: "Roboto_light";
-  font-size: 12px;
+  font-size: 20px;
   text-align: center;
   margin: 0px;
-  padding-top: 10px;
+  line-height: 2.6;
 }
 
 footer {
@@ -397,8 +450,8 @@ footer .logo {
 }
 
 footer .logo svg {
-  width: 90px;
-  height: 40px;
+  width: 150px;
+  height: 60px;
   fill: #ffffff;
 }
 
@@ -412,7 +465,7 @@ footer .logo ul {
 
 .list_footer {
   list-style-type: none;
-  font-size: 12px;
+  font-size: 18px;
   color: white;
   padding: 0px 0px 20px 30px;
   margin: 0px;
@@ -425,5 +478,287 @@ footer .logo ul {
 
 .list_footer li {
   padding-bottom: 10px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 960px) {
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu_1, .menu_2, .menu_3 {
+    width: 70%;
+    margin: 20px 0px;
+  }
+  .txt_menu h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .prix {
+    font-size: 22px;
+    top: 75px;
+  }
+  .one {
+    left: 0%;
+  }
+  .two {
+    left: 20%;
+  }
+  .three {
+    left: 40%;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 700px) {
+  .menu_1, .menu_2, .menu_3 {
+    width: 100%;
+  }
+  .titre_menu {
+    width: 95%;
+    height: 100px;
+    margin: 15px auto;
+  }
+  .one, .two, .three {
+    left: 0px;
+  }
+  .txt_menu h3 {
+    font-size: 22px;
+  }
+  .choix {
+    line-height: 3.4;
+  }
+  .tete .coeur {
+    right: 55px;
+  }
+  h4 {
+    font-size: 26px;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  p {
+    font-size: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .prix {
+    font-size: 24px;
+    top: 50px;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 560px) {
+  .titre_menu {
+    width: 95%;
+    height: 90px;
+    margin: 15px auto;
+  }
+  .txt_menu h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 22px;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  p {
+    font-size: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .prix {
+    font-size: 22px;
+    top: 50px;
+  }
+  .choix {
+    line-height: 3.2;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 520px) {
+  .tete .titre_carte h1 {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  .tete .coeur {
+    top: 22px;
+    right: 55px;
+  }
+  .tete .coeur .far {
+    font-size: 35px;
+  }
+  .tete .coeur .fas {
+    font-size: 34px;
+  }
+  .choix {
+    line-height: 3;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 470px) {
+  .titre_menu {
+    height: 80px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .prix {
+    font-size: 20px;
+    top: 40px;
+  }
+  .choix {
+    line-height: 2.8;
+    right: -70px;
+    width: 70px;
+  }
+  @-webkit-keyframes choix {
+    from {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    to {
+      -webkit-transform: translateX(-70px);
+              transform: translateX(-70px);
+    }
+  }
+  @keyframes choix {
+    from {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    to {
+      -webkit-transform: translateX(-70px);
+              transform: translateX(-70px);
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 420px) {
+  .tete .titre_carte h1 {
+    font-size: 28px;
+  }
+  .tete .coeur {
+    right: 30px;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 360px) {
+  .tete .titre_carte h1 {
+    font-size: 26px;
+    margin-left: 10px;
+  }
+  .tete .coeur {
+    top: 27px;
+    right: 27px;
+  }
+  .tete .coeur .far {
+    font-size: 28px;
+  }
+  .tete .coeur .fas {
+    font-size: 28px;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 320px) {
+  .tete .titre_carte h1 {
+    font-size: 24px;
+  }
+  .tete .coeur {
+    top: 25px;
+    right: 27px;
+  }
+  .tete .coeur .far {
+    font-size: 24px;
+  }
+  .tete .coeur .fas {
+    font-size: 23px;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 300px) {
+  .tete .titre_carte h1 {
+    font-size: 22px;
+  }
+  .tete .coeur {
+    top: 26px;
+  }
+  .tete .coeur .far {
+    font-size: 22px;
+  }
+  .tete .coeur .fas {
+    font-size: 21px;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (max-width: 270px) {
+  .tete .coeur {
+    top: 25px;
+    right: 18px;
+  }
 }
 /*# sourceMappingURL=la_palette.css.map */
