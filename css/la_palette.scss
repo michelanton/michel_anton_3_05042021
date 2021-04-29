@@ -2,8 +2,8 @@
 
 
 body{
-    max-width: 1080px;
-    min-width: 270px;
+    
+    min-width: 320px;
     margin: 0px auto;
     padding: 0px;
 }
@@ -13,21 +13,19 @@ a{
 }
 
 .logo{
-    position: relative;
-    width: 100%;
-   
     text-align: center;
-   padding: 20px 0px 10px 0px;
-  svg{
-    width: 30%;
-    height: 30%;
-      fill: black;
-  }
+    padding: 20px 0px 10px 0px;
+    svg {
+        fill: black;
+    }
+
   i{
       position: absolute;
-      left: 30px;
-    top: 35%;
-      font-size: 30px;
+      left: 0px;
+      margin-left: 10px;
+     
+      font-size: 24px;
+      line-height: 1.5;
  
   }
 }
@@ -46,6 +44,7 @@ a{
     img{
         width: 100%;
     } 
+    }
 }
 .titre_carte{
     position: absolute;
@@ -57,24 +56,17 @@ a{
     border-top-right-radius: 20px;
 
     h1{ 
-        margin: 20px 40px 10px 40px;
+        margin: 20px 40px 10px 10px;
         font-family: $font_Shrikhand, 'Courier New', Courier, monospace;
-        font-size: 34px;
+        font-size: 22px;
         font-weight: normal;   
     } 
 }
 .coeur {
-    position: absolute;
-    right: 104px;
-    top: 22px;
-   
-    
-    
-    } 
+    float: right;
     .far{
-        font-size: 40px;
+        font-size: 24px;
         color:black;
-        
     }
     .fas{
         display:none;
@@ -82,41 +74,47 @@ a{
         background-image:linear-gradient(to bottom, $couleur_secondaire 27%,$couleur_primaire 83%);
         -webkit-text-fill-color:transparent;
         -webkit-background-clip:text;
-    animation: test 0.5s ease-in;
+        animation: coeur 0.4s ease-in;
     }
-    .coeur:active{
-      .far{display: none;}
-      .fas{display: inline;
+}
+.coeur:active{
+      .far{
+          display: none;
+        }
+      .fas{
+          display: inline;
+        }
     }
+@keyframes coeur {
+    0% {
+        background-image:linear-gradient(to bottom, rgba(255,121,218,0) 1%,rgba(182,97,219,0) 68%,rgba(147,86,220,1) 100%);
     }
-    
+    10% {
+        background-image:linear-gradient(to bottom, rgba(255,121,218,0) 1%,rgba(202,104,219,0) 50%,rgba(147,86,220,1) 100%);
+    }
+    20% {
+        background-image:linear-gradient(to bottom, rgba(255,121,218,0) 1%,rgba(218,109,219,0) 35%,rgba(183,98,219,1) 67%,rgba(147,86,220,1) 100%);
+    }
+    30% {
+        background-image:linear-gradient(to bottom, rgba(255,121,218,0) 1%,rgba(232,114,218,0) 22%,rgba(192,101,219,1) 59%,rgba(147,86,220,1) 100%);
+    }
+    50% {
+        background-image:linear-gradient(to bottom, rgba(255,121,218,0) 1%,rgba(245,118,218,0) 10%,rgba(228,112,218,1) 26%,rgba(147,86,220,1) 100%);
+    }
+    70% {
+        background-image:linear-gradient(to bottom, rgba(255,121,218,0) 1%,rgba(253,120,218,0) 3%,rgba(238,115,218,1) 17%,rgba(147,86,220,1) 100%);
+    }
+    90% {
+        background-image:linear-gradient(to bottom, rgba(255,121,218,0) 0%,rgba(255,121,218,0.11) 1%,rgba(246,118,218,1) 9%,rgba(147,86,220,1) 100%);
+    }
+    100% {
+        background-image:linear-gradient(to bottom, rgba(255,121,218,1) 0%,rgba(255,121,218,1) 1%,rgba(147,86,220,1) 100%);
+    }
+}
 
-    @keyframes test {
-        0%{
-            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 27%,rgba(216,109,219,0) 47%,rgba(185,99,219,0) 63%,rgba(147,86,220,0.54) 83%,rgba(147,86,220,1) 100%);
-        }
-        20%{
-            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 27%,rgba(230,113,218,0) 40%,rgba(147,86,220,0.72) 83%,rgba(147,86,220,1) 100%);
-        }
-        40%{
-            background-image:linear-gradient(to bottom, rgba(255,121,218,0) 21%,rgba(255,121,218,0.08) 27%,rgba(147,86,220,0.79) 83%,rgba(147,86,220,1) 100%);
-        }
-        60%{
-            background-image:linear-gradient(to bottom, rgba(255,121,218,0.09) 9%,rgba(255,121,218,0.27) 27%,rgba(147,86,220,0.83) 83%,rgba(147,86,220,1) 100%);
-        }
-        80%{
-            background-image:linear-gradient(to bottom, rgba(255,121,218,0.09) 0%,rgba(255,121,218,0.34) 27%,rgba(147,86,220,0.85) 83%,rgba(147,86,220,1) 100%);
-        }
-        100%{
-            background-image:linear-gradient(to bottom, rgba(255,121,218,1) 27%,rgba(147,86,220,1) 83%);
-        }
-    }
 
-    }
     .menu{  
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        
       
      
     }
@@ -124,22 +122,15 @@ a{
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 33%;
+        width: 98%;
         margin: 0px auto;
     }
     
-.ligne{
-    position: absolute;
-    top: 33px;
-    width: 60px;
-    height: 4px;
-    margin: 0px 0px 0px 17px;
-    background-color: $couleur_tertiaire;
- }
+
 .titre_menu{
     position: relative;
     background-color: white;
-    height: 130px;
+    height: 65px;
     margin: 10px 10px;
     border: none;
     border-radius: 25px;
@@ -147,7 +138,7 @@ a{
     cursor: pointer;
     overflow: hidden;
     animation: menu 0.8s ease-out;
-}
+
       @keyframes menu {
         from{
             opacity: 0;
@@ -168,49 +159,46 @@ a{
                 transform: translateY(0px);
             }
     } 
-    .txt_menu h3{
-        font-size: 20px;
-        margin: 0px 0px 20px 17px;
-    }    
-  h3{
-        font-family: $font_bold;
-        font-size: 12px;
-        margin: 0px 0px 3px 10px;
-        padding-top: 6px;
         
-        
-    }
+    
     h4{
-        font-family: $font_bold;
-        font-size: 20px;
-       
-        margin: 10px 0px 2px 20px;
+        margin: 5px 0px 0px 15px;
         padding-top: 6px;
         padding-right: 20px;
-       
+        max-width: 75%;
+        font-family: $font_bold;
+        font-size: 16px;
+        line-height: 1.5;
+        text-overflow: ellipsis;
         overflow: hidden;
+        white-space: nowrap;
+      
         animation: textmenu 0.8s ;
     }
     p{
-        font-family:  $font_regular;
-        margin: 0px 60px 0px 20px;
-        font-size: 18px;
-        line-height: 1.2;
-        
-        padding-right: 10px;
-      
         overflow: hidden;
+        margin: 0px 0px 0px 15px;
+        padding-right: 10px;
+        max-width: 70%;
+        font-size: 14px;
+        line-height: 1.5;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family:  $font_regular;
+      
+        
         animation: 0.3s textmenu ;
     }
     
     .prix{
         position: absolute;
-        right:0px;
-        top: 70px;
-       
-        margin: 0px 20px 0px 10px;
+        right: 10px;
+        bottom: 8px;
+        
+        margin: 0px 10px 0px 10px;
         font-family: $font_bold;
-        font-size: 24px;
+        font-size: 18px;
         cursor: pointer;
         animation: 1s textmenu ;
     }
@@ -218,43 +206,47 @@ a{
        
 
         position: absolute;
-        right: -80px;
+        right: -70px;
         top: 0px;
-        width: 80px;
+        width: 70px;
         height: 100%;
-    
         text-align: center;
-        font-size: 30px;
-        color: white;
-        line-height: 4;
+        line-height: 3.2;
+        color: #ffffff;
+        font-size: 20px;
         border-top-right-radius: $radius1;
         border-bottom-right-radius: $radius1;
         background-color: darken($color: $couleur_tertiaire, $amount: 10);
-       
+       i{
+
+
+       }
     }
+}
 .titre_menu:hover{
 
 
-    .prix{
+    .prix {
+       margin: 0px;
         animation: 0.45s ease-in  0s choix both;
         
     }
-.choix{
+    .choix {
    
-    animation: 0.5s ease-out  0s choix both;
-}
-.choix i{
+            animation: 0.5s ease-out  0s choix both;
+    }
+    .choix i {
    
     animation: 0.38s ease-in-out  0.15s anim-icon ;
 
-}
-h4{
+    }
+    h4 {
     margin-right: 60px;
-}
-p{
+    }
+    p {
     margin-right: 140px;
    
-}
+    }
 
 }
 @keyframes choix {
@@ -263,7 +255,7 @@ p{
        
     }
     to{
-        transform: translateX(-80px)  ;
+        transform: translateX(-70px)  ;
        
     }
 }
@@ -277,18 +269,34 @@ p{
        
     }
 }
-
+.txt_menu h3{
+   
+      
+        padding-top: 6px;
+        margin: 0px 0px 5px 10px;
+        font-family: $font_bold;
+        font-size: 16px;
+  
+   
+}
+.ligne{
+   
+    width: 60px;
+    height: 4px;
+    margin: 0px 0px 0px 10px;
+    background-color: $couleur_tertiaire;
+ }
 
 .bouton{
 
     font-family:   $font_regular;
     background-image:$degrade;
-    width: 260px;
+    width: 220px;
     height: 55px; 
     border-radius: 25px;
     border: none;
     box-shadow: $shadow;
-    margin: 30px auto  00px auto;
+    margin: 40px auto;
     cursor: pointer;
     transition:0.3s;
     @if (lightness($couleur_primaire) > 50%) {
@@ -369,243 +377,59 @@ p{
 /*--------------------@media query--------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 960px) {   
+@media screen and (min-width: 700px) {   
  .titre_menu{
-     height: 100px;
+     height: 135px;
+     .choix{
+        line-height: 4.5;
+        font-size: 30px; 
+     }
  }
     .menu{  
-      flex-direction: column;
-
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 0px 20px;
+     h4{
+         margin: 5px 0px 5px 15px;
+        font-size: 16px;
+        line-height: 1.2;
+        text-overflow: clip;
+        white-space: pre-line;
+       }
+       p{
+        margin-right: 50px;
+        text-overflow: clip;
+        white-space: pre-line;
+        font-size: 14px;
+        line-height: 1.4;
+    }
     }
     .menu_1, .menu_2, .menu_3{
-        width: 70%;
+        width: 32%;
         margin: 20px 0px;
    } 
    .txt_menu h3{
   
        font-size:22px ;
    } 
-   h4{
-       font-size: 22px;
-       margin-top: 10px;
-   }
-   p{
-       font-size: 20px;
-   }
-   .prix{
-    font-size: 22px; 
-    top: 60px;
-   }
-
-.one {
-left: 0%;
-}
-.two{
-    left: 20% ;
-}
-.three{
-    left: 40% ;
-}
-
-}
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 700px) { 
-    .menu_1, .menu_2, .menu_3{
-        width: 100%;
-   }   
-    .titre_menu{
-        width: 95%;
-        height: 100px;
-        margin: 15px auto;
-    }
-    .one, .two, .three{
-        left: 0px;
-    }
-    .txt_menu h3{
-  margin: 0px 0px 15px 17px;
-        font-size:22px ;
-    } 
-    .choix{
-        line-height: 3.4;
-    }
-    .tete .coeur {
-        right: 55px;
-    }
-    h4{
-        font-size: 26px;
-        margin-top: 10px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      
-    }
-    p{
-        font-size: 22px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-       
-    }
-    .prix{
-     font-size: 24px; 
-     top: 50px;
-    }
-    
-}
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 560px) { 
-    .titre_menu{
-        width: 95%;
-        height: 90px;
-        margin: 15px auto;
-    }
-    .txt_menu h3{
   
-        font-size:20px ;
-    } 
-    .ligne{
-        width: 50px;
-        height: 3px;
-    }
-    h4{
-        font-size: 22px;
-        margin-top: 10px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      
-    }
-    p{
-        font-size: 20px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-       
-    }
-    .prix{
-     font-size: 22px; 
-     top: 50px;
-    }
-    .choix{
-        line-height: 3.2;
-    }
    
+   .prix{
+    font-size: 26px; 
+    top: 100px;
+   }
 
-}
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 520px) { 
-    .tete .titre_carte{
-       
-        h1{
-            font-size: 30px;
-            margin-left: 10px;
-        }
-    }
-    .tete .coeur {
-        top: 22px;
-        right: 55px;
-        .far{
-            font-size: 35px;
-          
-            
-        }
-        .fas{
-            font-size: 34px;
-    }
-}
-.choix{
-    line-height: 3;
-}
-}
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 470px) {
-    .titre_menu{
-    
-        height: 80px;
-       
-    } 
+   .titre_menu:hover{
     h4{
-        font-size: 20px;
-    }
+        margin-right: 60px;
+        text-overflow: ellipsis;
+ 
+    white-space: nowrap;    }
     p{
-        font-size: 18px;
-    }
-    .prix{
-        font-size: 20px; 
-        top: 40px;
-       }
-    .choix{
-        line-height: 2.8;
-        right: -70px;
-        width: 70px;
-    }
-    @keyframes choix {
-        from{
-            transform: translateX(0px)  ;
-           
-        }
-        to{
-            transform: translateX(-70px)  ;
-           
-        }
-    }
-}
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 420px) {
-    .tete .titre_carte{
-       
-        h1{
-            font-size: 28px;
-        
-        }
-    }
-    .tete .coeur {
-        right: 30px;
-}
-}
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 360px) {
-    .tete .titre_carte{
-       
-        h1{
-            font-size: 26px;
-            margin-left: 10px;
-        }
-    }
-    .tete .coeur {
-        top: 27px;
-        right: 27px;
-        .far{
-            font-size: 28px;
-          
-            
-        }
-        .fas{
-            font-size: 28px;
+        text-overflow: ellipsis;
+     
+        white-space: wrap;
     }
 }
 }
@@ -614,61 +438,23 @@ left: 0%;
 /*--------------------@media query--------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 320px) {
-    .tete .titre_carte{
-       
-        h1{
-            font-size: 24px;
+@media screen and (min-width: 990px) { 
+    .titre_menu{
+        height: 110px;
+        h4{
+            font-size: 18px;
+        }
+        p{
+            font-size: 16px; 
           
         }
-    }
-    .tete .coeur {
-        top: 25px;
-        right: 27px;
-        .far{
-            font-size: 24px;
-          
-            
+        .prix{
+            font-size: 22px; 
+            top: 60px;
         }
-        .fas{
-            font-size: 23px;
-    }
-    }
-}
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 300px) {
-    .tete .titre_carte{
-       
-        h1{
-            font-size: 22px;
-          
-        }
-    }
-    .tete .coeur {
-        top: 26px;
-        
-        .far{
-            font-size: 22px;
-          
-            
-        }
-        .fas{
-            font-size: 21px;
-    }
-    } 
-}
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (max-width: 270px) {
-.tete .coeur {
-    top: 25px;
-    right: 18px;
-}
+        .choix{
+            line-height: 4;
+            font-size: 28px; 
+         }
+ }
 }
