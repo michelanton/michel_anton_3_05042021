@@ -221,6 +221,7 @@
 /*LOADER */
 /*LOADER */
 body {
+  min-width: 300px;
   position: relative;
   margin: 0px auto;
   padding: 0px;
@@ -352,17 +353,11 @@ h1 {
 }
 
 .block2_fonction {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 0px auto;
-  padding-bottom: 30px;
-  width: 30%;
+  margin: 20px auto;
+  padding: 10px;
 }
 
 .block2_fonction ol {
@@ -371,15 +366,15 @@ h1 {
 
 .block2_fonction h1 {
   font-size: 28px;
-  margin: 10px 10px 10px 0px;
+  margin: 10px;
   text-align: left;
   padding: 0%;
 }
 
 .fonc {
   position: relative;
-  margin: 50px auto;
-  width: 350px;
+  margin: 20px auto;
+  width: 90%;
   height: 80px;
   border: none;
   border-radius: 20px;
@@ -405,7 +400,7 @@ h1 {
 
 .fonc i {
   position: absolute;
-  left: 25px;
+  left: 20px;
   top: 30px;
   margin-right: 15px;
   margin-left: 10px;
@@ -413,10 +408,10 @@ h1 {
 }
 
 .fonc p {
-  margin-left: 20px;
+  margin-left: 25px;
   font-family: "Roboto_medium";
-  line-height: 3.9;
-  font-size: 20px;
+  line-height: 5;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -438,16 +433,16 @@ h1 {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
   width: 100%;
   background-color: #e4e0e0;
 }
 
 .block3_restaurant h3 {
-  margin: 0px 0px 10px 0px;
-  text-align: center;
+  margin: 0px 0px 10px 10px;
   font-family: "Roboto_black";
   font-size: 28px;
 }
@@ -487,7 +482,8 @@ h1 {
 }
 
 .block3_cadre:hover {
-  scale: 1.05;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -665,75 +661,68 @@ footer .logo ul {
 /*----------------------------------------------------------------------------------*/
 /*--------------------@media query--------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
-@media screen and (max-width: 1080px) {
-    .fonc{ 
-        width: 300px;
-        height: 60px;
-        .circle{
-            width: 25px;
-            height: 25px;
-            top: 20px;
-            font-size: 13px;
-            line-height: 2;
-        }
-        i{
-            font-size: 22px;
-            top: 18px;
-        }
-        p{
-            font-size: 16px;
-            line-height: 3.8;
-            margin-left: 30px;
-    }
-} 
-}*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (min-width: 400px) {
+  .block2_fonction {
+    max-width: 450px;
+  }
+  .fonc {
+    max-width: 380px;
+  }
+  .fonc .circle {
+    width: 25px;
+    height: 25px;
+    top: 25px;
+    font-size: 13px;
+    line-height: 2;
+  }
+  .fonc i {
+    font-size: 22px;
+    top: 27px;
+  }
+  .fonc p {
+    font-size: 20px;
+    line-height: 4;
+    margin-left: 30px;
+  }
+}
+
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*--------------------@media query--------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
-@media screen and (max-width: 1000px) {
-    
-   
-    .cadre_restau{ 
-        height: 220px;    
-      
-    .txt_cadre{ 
-        height: 50px;
-        h4{
-         
-            font-size: 16px;
-            margin: 10px 0px 0px 10px;
-        }
-        .coeur{
-            top: 8px;
-        }
-    }
-    }
-.image_cadre1 img{
-    right: -25px;
-    top: -19px;
-    width: 129%; 
+/*----------------------------------------------------------------------------------*/
+@media screen and (min-width: 820px) {
+  .block3_restaurant {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .block3_cadre {
+    width: 45%;
+  }
+  .fonc {
+    max-width: 380px;
+  }
+  .fonc .circle {
+    width: 25px;
+    height: 25px;
+    top: 25px;
+    font-size: 13px;
+    line-height: 2;
+  }
+  .fonc i {
+    font-size: 22px;
+    top: 27px;
+  }
+  .fonc p {
+    font-size: 20px;
+    line-height: 4;
+    margin-left: 30px;
+  }
 }
-.image_cadre2 img{
-    
-    right: -21px;
-top: -25px;
-width: 124%; 
-}
-.image_cadre3 img{
-    right: -52px;
-    top: -28px;
-    width: 133%; 
-}
-.image_cadre4 img{
-    right: -32px;
-    top: -9px;
-    width: 119%;
-}
-} 
-*/
+
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*--------------------@media query--------------------------------------------------*/
