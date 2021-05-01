@@ -1,37 +1,37 @@
 @font-face {
     font-family: "Shrikhand";
-    src: url(..FONTS/Shrikhand/Shrikhand-Regular.ttf);
+    src: url(../font/Shrikhand/Shrikhand-Regular.ttf);
   }
   @font-face {
     font-family: "Roboto_black";
-    src: url(..FONTS/Roboto/Roboto-Black.ttf);
+    src: url(../font/Roboto/Roboto-Black.ttf);
   }
   @font-face {
     font-family: "Roboto_light";
-    src: url(..FONTS/Roboto/Roboto-Light.ttf);
+    src: url(../font/Roboto/Roboto-Light.ttf);
   }
   @font-face {
     font-family: "Roboto_thin";
-    src: url(..FONTS/Roboto/Roboto-Thin.ttf);
+    src: url(../font/Roboto/Roboto-Thin.ttf);
   }
   @font-face {
     font-family: "Roboto_bold";
-    src: url(..FONTS/Roboto/Roboto-Bold.ttf);
+    src: url(../font/Roboto/Roboto-Bold.ttf);
   }
   @font-face {
     font-family: "Roboto_regular";
-    src: url(..FONTS/Roboto/Roboto-Regular.ttf);
+    src: url(../font/Roboto/Roboto-Regular.ttf);
   }
   @font-face {
     font-family: "Roboto_medium";
-    src: url(..FONTS/Roboto/Roboto-Medium.ttf);
+    src: url(../font/Roboto/Roboto-Medium.ttf);
   }
-  $font_Shrikhand:"Shrikhand";
-  $font_medium:"Roboto_medium";
-  $font_regular:"Roboto_regular";
+  $font_Shrikhand: "Shrikhand";
+  $font_medium: "Roboto_medium";
+  $font_regular: "Roboto_regular";
   $font_bold: "Roboto_bold";
-  $font_thin:"Roboto_thin";
-  $font_light:"Roboto_light";
+  $font_thin: "Roboto_thin";
+  $font_light: "Roboto_light";
   $font_black: "Roboto_black";
 
 $couleur_primaire:#9356dc;
