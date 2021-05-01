@@ -108,7 +108,7 @@
   font-family: "Shrikhand";
   font-size: 10px;
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.5;
   color: black;
 }
 
@@ -206,6 +206,21 @@
     -webkit-transform: translateX(60px);
     transform: translateX(60px);
   }
+}
+
+.loader_fonctionement {
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 125px);
+}
+
+.loader_fonctionement ol {
+  font-family: "Roboto_medium";
+  font-size: 16px;
+}
+
+.loader_fonctionement li {
+  margin: 5px 0px 0px 0px;
 }
 
 /*LOADER */
@@ -436,13 +451,13 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 5px;
+  padding-bottom: 40px;
   width: 100%;
   background-color: #e4e0e0;
 }
 
 .block3_restaurant h3 {
-  margin: 0px 0px 10px 10px;
+  margin: 50px 0px 10px 5%;
   font-family: "Roboto_black";
   font-size: 28px;
 }
@@ -482,8 +497,8 @@ h1 {
 }
 
 .block3_cadre:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -538,8 +553,6 @@ h1 {
   display: none;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #ff79da), color-stop(83%, #9356dc));
   background-image: linear-gradient(to bottom, #ff79da 27%, #9356dc 83%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   -webkit-animation: coeur 0.3s ease-in;
           animation: coeur 0.3s ease-in;
 }
@@ -615,7 +628,6 @@ h1 {
 }
 
 footer {
-  margin: 0px 10px 0px 10px;
   padding: 0%;
 }
 
@@ -655,6 +667,10 @@ footer .logo ul {
 .block_footer_list li {
   padding-bottom: 10px;
   font-size: 14px;
+}
+
+.block_footer_list li a {
+  color: #ffffff;
 }
 
 /*----------------------------------------------------------------------------------*/
@@ -698,6 +714,9 @@ footer .logo ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .block3_restaurant h3 {
+    margin: 0px 0px 10px 20px;
   }
   .block3_cadre {
     width: 45%;

@@ -86,7 +86,7 @@ a {
 }
 
 .titre_carte h1 {
-  margin: 20px 40px 10px 10px;
+  margin: 20px 40px 10px 25px;
   font-family: "Shrikhand", "Courier New", Courier, monospace;
   font-size: 22px;
   font-weight: normal;
@@ -103,7 +103,7 @@ a {
 
 .coeur .fas {
   display: none;
-  font-size: 39px;
+  font-size: 25px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #ff79da), color-stop(83%, #9356dc));
   background-image: linear-gradient(to bottom, #ff79da 27%, #9356dc 83%);
   -webkit-text-fill-color: transparent;
@@ -329,8 +329,8 @@ a {
 
 .titre_menu:hover .prix {
   margin: 0px;
-  -webkit-animation: 0.45s ease-in  0s choix both;
-          animation: 0.45s ease-in  0s choix both;
+  -webkit-animation: 0.45s ease-out  0s choix both;
+          animation: 0.45s ease-out  0s choix both;
 }
 
 .titre_menu:hover .choix {
@@ -348,7 +348,7 @@ a {
 }
 
 .titre_menu:hover p {
-  margin-right: 140px;
+  margin-right: 150px;
 }
 
 @-webkit-keyframes choix {
@@ -482,6 +482,10 @@ footer .logo ul {
   padding-bottom: 10px;
 }
 
+.list_footer li a {
+  color: #ffffff;
+}
+
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*--------------------@media query--------------------------------------------------*/
@@ -542,14 +546,23 @@ footer .logo ul {
     text-overflow: ellipsis;
     white-space: wrap;
   }
+  .titre_carte h1 {
+    font-size: 30px;
+  }
+  .coeur .far {
+    font-size: 36px;
+  }
+  .coeur .fas {
+    font-size: 37px;
+  }
+  /*----------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------*/
+  /*--------------------@media query--------------------------------------------------*/
+  /*----------------------------------------------------------------------------------*/
+  /*----------------------------------------------------------------------------------*/
 }
 
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*--------------------@media query--------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 700px) and (min-width: 990px) {
   .titre_menu {
     height: 110px;
   }

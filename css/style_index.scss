@@ -67,7 +67,7 @@
     font-family: "Shrikhand";
     font-size: 10px;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.5;
     color:black;
   }
   
@@ -162,7 +162,23 @@
       -webkit-transform: translateX(60px);
               transform: translateX(60px);
     }
-  }
+    
+}
+.loader_fonctionement{
+    position: absolute;
+    top: 200px;
+    left: calc(50% - 125px);
+    ol{
+        font-family:  $font_medium;
+        font-size: 16px;
+    
+    }
+    li{
+        margin: 5px 0px 0px 0px;
+    
+    }
+    
+}
 /*LOADER *//*LOADER *//*LOADER *//*LOADER *//*LOADER *//*LOADER */
 /*LOADER *//*LOADER *//*LOADER *//*LOADER *//*LOADER *//*LOADER */
 body {
@@ -345,13 +361,13 @@ h1 {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 5px;
+    padding-bottom: 40px;
 
     width: 100%;
 
     background-color: $couleur_gris;
     h3{
-        margin: 0px 0px 10px 10px;
+        margin: 50px 0px 10px 5%;
 
         
         font-family:  $font_black;
@@ -393,7 +409,7 @@ h1 {
     }
 }
 .block3_cadre:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
     transition: 0.4s;
 }
 .block3_cadre_txt {
@@ -442,8 +458,6 @@ h1 {
 .coeur .fas {
     display:none;
     background-image:linear-gradient(to bottom, $couleur_secondaire 27%,$couleur_primaire 83%);
-    -webkit-text-fill-color:transparent;
-    -webkit-background-clip:text;
     animation: coeur 0.3s ease-in;
     }
     @keyframes coeur {
@@ -473,7 +487,7 @@ h1 {
         }
     }
 footer {
-    margin: 0px 10px 0px 10px ;
+    
     padding: 0%;
     .logo { 
         text-align: left;
@@ -515,7 +529,10 @@ footer {
         }
         li {
             padding-bottom: 10px;
-            font-size: 14px;  
+            font-size: 14px; 
+            a{
+                color:#ffffff;
+            } 
         }
 }
 /*----------------------------------------------------------------------------------*/
@@ -555,7 +572,10 @@ footer {
 /*----------------------------------------------------------------------------------*/
 @media screen and (min-width: 820px) {
     .block3_restaurant{
-      flex-direction: row;  
+      flex-direction: row; 
+      h3{
+          margin: 0px 0px 10px 20px;
+      } 
     }
     .block3_cadre {
         width: 45%;
