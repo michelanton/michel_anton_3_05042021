@@ -61,7 +61,7 @@ a {
   line-height: 1.5;
 }
 
-#carte {
+.carte {
   background-color: #e4e0e0;
   padding-top: 10px;
   padding-bottom: 40px;
@@ -209,7 +209,7 @@ a {
   height: 65px;
   margin: 10px 10px;
   border: none;
-  border-radius: 25px;
+  border-radius: 15px;
   -webkit-box-shadow: 2px 4px 9px #aaa8a8;
           box-shadow: 2px 4px 9px #aaa8a8;
   cursor: pointer;
@@ -320,7 +320,7 @@ a {
   height: 100%;
   text-align: center;
   line-height: 3.2;
-  color: #ffffff;
+  color: white;
   font-size: 20px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -423,6 +423,7 @@ a {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  /*si la couleur de fond du bouton s'eclairsi, le texte change de couleur*/
   color: white;
 }
 
@@ -454,14 +455,14 @@ footer .logo {
 footer .logo svg {
   width: 150px;
   height: 60px;
-  fill: #ffffff;
+  fill: white;
 }
 
 footer .logo ul {
   list-style-type: none;
 }
 
-.cadre_footer {
+footer {
   background-color: #0a0a0a;
 }
 
@@ -483,7 +484,11 @@ footer .logo ul {
 }
 
 .list_footer li a {
-  color: #ffffff;
+  color: white;
+}
+
+.list_footer li a:hover {
+  text-decoration: underline;
 }
 
 /*----------------------------------------------------------------------------------*/
@@ -544,7 +549,7 @@ footer .logo ul {
   }
   .titre_menu:hover p {
     text-overflow: ellipsis;
-    white-space: wrap;
+    white-space: normal;
   }
   .titre_carte h1 {
     font-size: 30px;
@@ -555,14 +560,14 @@ footer .logo ul {
   .coeur .fas {
     font-size: 37px;
   }
-  /*----------------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------------*/
-  /*--------------------@media query--------------------------------------------------*/
-  /*----------------------------------------------------------------------------------*/
-  /*----------------------------------------------------------------------------------*/
 }
 
-@media screen and (min-width: 700px) and (min-width: 990px) {
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*--------------------@media query--------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@media screen and (min-width: 990px) {
   .titre_menu {
     height: 110px;
   }
