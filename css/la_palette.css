@@ -86,7 +86,7 @@ a {
 }
 
 .titre_carte h1 {
-  margin: 20px 40px 10px 25px;
+  margin: 20px 40px 10px 15px;
   font-family: "Shrikhand", "Courier New", Courier, monospace;
   font-size: 22px;
   font-weight: normal;
@@ -106,6 +106,8 @@ a {
   font-size: 25px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #ff79da), color-stop(83%, #9356dc));
   background-image: linear-gradient(to bottom, #ff79da 27%, #9356dc 83%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-animation: coeur 0.4s ease-in;
           animation: coeur 0.4s ease-in;
 }
@@ -395,7 +397,7 @@ a {
 
 .txt_menu h3 {
   padding-top: 6px;
-  margin: 0px 0px 5px 10px;
+  margin: 30px 0px 5px 10px;
   font-family: "Roboto_bold";
   font-size: 16px;
 }
@@ -403,7 +405,7 @@ a {
 .ligne {
   width: 60px;
   height: 4px;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 20px 10px;
   background-color: #99e2d0;
 }
 
@@ -417,7 +419,7 @@ a {
   border: none;
   -webkit-box-shadow: 2px 4px 9px #aaa8a8;
           box-shadow: 2px 4px 9px #aaa8a8;
-  margin: 40px auto;
+  margin: 50px auto 90px auto;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
