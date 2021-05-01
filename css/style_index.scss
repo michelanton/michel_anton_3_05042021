@@ -168,12 +168,17 @@
     position: absolute;
     top: 200px;
     left: calc(50% - 125px);
-    ol{
+    p{
+        margin-left: 20px;
+        font-family:  $font_medium;
+        font-size: 18px; 
+    }
+    ol {
         font-family:  $font_medium;
         font-size: 16px;
     
     }
-    li{
+    li {
         margin: 5px 0px 0px 0px;
     
     }
@@ -299,7 +304,7 @@ h1 {
     h1 {
       
         font-size: 28px;
-        margin:10px;
+        margin:10px 10px 10px 20px;
         text-align: left;
         padding: 0%;
     }
