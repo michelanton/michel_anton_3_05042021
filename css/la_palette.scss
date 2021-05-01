@@ -72,8 +72,6 @@ a{
         display:none;
         font-size: 25px;
         background-image:linear-gradient(to bottom, $couleur_secondaire 27%,$couleur_primaire 83%);
-        -webkit-text-fill-color:transparent;
-        -webkit-background-clip:text;
         animation: coeur 0.4s ease-in;
     }
 }
@@ -111,13 +109,6 @@ a{
         background-image:linear-gradient(to bottom, rgba(255,121,218,1) 0%,rgba(255,121,218,1) 1%,rgba(147,86,220,1) 100%);
     }
 }
-
-
-    .menu{  
-        
-      
-     
-    }
 .menu_1, .menu_2, .menu_3{
         position: relative;
         display: flex;
@@ -217,10 +208,6 @@ a{
         border-top-right-radius: $radius1;
         border-bottom-right-radius: $radius1;
         background-color: darken($color: $couleur_tertiaire, $amount: 10);
-       i{
-
-
-       }
     }
 }
 .titre_menu:hover{

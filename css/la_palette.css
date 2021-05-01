@@ -106,8 +106,6 @@ a {
   font-size: 25px;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #ff79da), color-stop(83%, #9356dc));
   background-image: linear-gradient(to bottom, #ff79da 27%, #9356dc 83%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   -webkit-animation: coeur 0.4s ease-in;
           animation: coeur 0.4s ease-in;
 }
