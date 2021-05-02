@@ -494,6 +494,12 @@ footer {
         font-size: 14px; 
         a {
             color:$couleur_blanc;
+            @if (lightness($couleur_footer) < 50%) {
+                color:$couleur_blanc;
+                }
+            @else {
+                color: $couleur_loge;
+                }
             &:hover{
                 text-decoration: underline;
             }

@@ -26,6 +26,7 @@
     font-family: "Roboto_medium";
     src: url(../font/Roboto/Roboto-Medium.ttf);
   }
+
   $font_Shrikhand: "Shrikhand";
   $font_medium: "Roboto_medium";
   $font_regular: "Roboto_regular";
@@ -34,14 +35,14 @@
   $font_light: "Roboto_light";
   $font_black: "Roboto_black";
 
-$couleur_primaire:#9356dc;
-$couleur_secondaire:#ff79da;
+$couleur_primaire:#dbc5f5;
+$couleur_secondaire:#fdd8f3;
 $couleur_tertiaire:#99e2d0;
 $degrade:linear-gradient(to bottom, rgba(255,121,218,1) 1%,rgba(147,86,220,1) 100%,rgba(147,86,220,1) 100%,rgba(147,86,220,1) 100%); 
 $couleur_gris:#e4e0e0;
 $couleur_blanc:white;
 $couleur_loge: black;
-$couleur_footer:rgb(10, 10, 10);
+$couleur_footer:rgb(7, 7, 7);
 $couleur_txt_footer: white;
 $shadow:2px 4px 9px#aaa8a8;
 $radius1:10px;

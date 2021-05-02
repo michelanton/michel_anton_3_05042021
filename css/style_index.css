@@ -103,7 +103,7 @@
   height: 15px;
   background-color: #99e2d0;
   border-radius: 50%;
-  border: 1px solid #9356dc;
+  border: 1px solid #dbc5f5;
   opacity: 0;
   font-family: "Shrikhand";
   font-size: 10px;
@@ -391,7 +391,7 @@ h1 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #6023a9;
+  background-color: #a56ee6;
   text-align: center;
   font-size: 16px;
   line-height: 1.7;
@@ -420,7 +420,7 @@ h1 {
 }
 
 .fonc.fonc3 {
-  background-color: #c9abee;
+  background-color: white;
 }
 
 .block3_restaurant {
@@ -536,8 +536,8 @@ h1 {
 
 .coeur .fas {
   display: none;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #ff79da), color-stop(83%, #9356dc));
-  background-image: linear-gradient(to bottom, #ff79da 27%, #9356dc 83%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(27%, #fdd8f3), color-stop(83%, #dbc5f5));
+  background-image: linear-gradient(to bottom, #fdd8f3 27%, #dbc5f5 83%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: coeur 0.3s ease-in;
@@ -634,7 +634,7 @@ footer .logo ul {
 }
 
 footer {
-  background-color: #0a0a0a;
+  background-color: #070707;
 }
 
 .block_footer_list {
@@ -657,6 +657,7 @@ footer {
 }
 
 .block_footer_list li a {
+  color: white;
   color: white;
 }
 
