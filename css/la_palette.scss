@@ -122,12 +122,14 @@ a {
     box-shadow:  $shadow;
     cursor: pointer;
     overflow: hidden;
-    animation: menu 0.8s ease-out;
+   
+    
+    
 
     @keyframes menu {
         from {
             opacity: 0;
-            transform: translateY(8px);
+            transform: translateY(15px);
         }
         to {
             opacity: 1;
@@ -136,12 +138,12 @@ a {
     }
     @keyframes textmenu {
             from {
-                opacity: 0;
-                transform: translateY(15px);
+                opacity: 0;/*
+                transform: translateY(15px);*/
             }
             to {
-                opacity: 1;
-                transform: translateY(0px);
+                opacity: 1;/*
+                transform: translateY(0px);*/
             }
     }  
     h4 {
@@ -197,6 +199,16 @@ a {
         border-bottom-right-radius: $radius1;
         background-color: darken($color: $couleur_tertiaire, $amount: 10);
     }
+}
+.one{
+   
+    animation: menu 0.4s ease-out ;
+}
+.two{
+    animation: menu 0.7s ease-out ;
+}
+.three{
+    animation: menu 1s ease-out ;
 }
 .titre_menu:hover {
     .prix {

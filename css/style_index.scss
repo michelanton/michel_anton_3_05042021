@@ -4,6 +4,7 @@
 /*LOADER *//*LOADER *//*LOADER *//*LOADER *//*LOADER *//*LOADER */
 
 .loader {
+   
     opacity: 1;
     position: absolute;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ff79da), color-stop(100%, #9356dc), color-stop(100%, #9356dc), to(#9356dc));
@@ -29,22 +30,23 @@
     font-size: 14px;
   }
   @-webkit-keyframes ground2 {
-    from {
+    0% {
       -webkit-transform: translatey(0px);
               transform: translatey(0px);
     }
-    to {
+   100% {
       -webkit-transform: translatey(1000px);
               transform: translatey(1000px);
       opacity: 0;
     }
   }
   @keyframes ground2 {
-    from {
+    0% {
+        
       -webkit-transform: translatey(0px);
               transform: translatey(0px);
     }
-    to {
+    100% {
       -webkit-transform: translatey(1000px);
               transform: translatey(1000px);
       opacity: 0;
@@ -288,7 +290,7 @@ h1 {
         height: 30px;
 
         border-radius: 50%;
-        background-color: darken($color: $couleur_primaire, $amount: 20);
+        background-color: darken($color: $couleur_primaire, $amount: 50);
 
         text-align: center;
         font-size: 16px;
@@ -315,7 +317,7 @@ h1 {
     }
     &.fonc1, &.fonc2 {background-color: $couleur_gris;
     }
-    &.fonc3 { background-color:lighten($color: $couleur_primaire, $amount: 20);  
+    &.fonc3 { background-color:lighten($color: $couleur_primaire, $amount: 1);  
       }
 }
 .block3_restaurant { 
