@@ -46,15 +46,15 @@
 /*LOADER */
 /*LOADER */
 .loader {
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ff79da), color-stop(100%, #9356dc), color-stop(100%, #9356dc), to(#9356dc));
   background: linear-gradient(to bottom, #ff79da 1%, #9356dc 100%, #9356dc 100%, #9356dc 100%);
   width: 100%;
   height: 100%;
   left: 0px;
-  -webkit-animation: ground2 1.5s ease-in 2.8s 1 both;
-  animation: ground2 1.5s ease-in 2.8s 1 both;
+  -webkit-animation: ground2 1.5s ease-in 2.8s 1 backwards;
+  animation: ground2 1.5s ease-in 2.8s 1 backwards;
 }
 
 .loader .logo_loader {
@@ -75,6 +75,7 @@
 
 @-webkit-keyframes ground2 {
   0% {
+    opacity: 1;
     -webkit-transform: translatey(0px);
     transform: translatey(0px);
   }
@@ -87,6 +88,7 @@
 
 @keyframes ground2 {
   0% {
+    opacity: 1;
     -webkit-transform: translatey(0px);
     transform: translatey(0px);
   }
