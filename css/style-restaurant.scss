@@ -122,10 +122,6 @@ a {
     box-shadow:  $shadow;
     cursor: pointer;
     overflow: hidden;
-   
-    
-    
-
     @keyframes menu {
         from {
             opacity: 0;
@@ -201,7 +197,6 @@ a {
     }
 }
 .one{
-   
     animation: menu 0.4s ease-out ;
 }
 .two{
