@@ -108,8 +108,8 @@ a {
   background-image: linear-gradient(to bottom, #fdd8f3 27%, #dbc5f5 83%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: coeur 0.4s ease-in;
-          animation: coeur 0.4s ease-in;
+  -webkit-animation: coeur 0.4s ease-in both;
+          animation: coeur 0.4s ease-in both;
 }
 
 .coeur:active .far {

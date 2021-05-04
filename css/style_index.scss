@@ -422,7 +422,7 @@ h1 {
     background-image: linear-gradient(to bottom, $couleur_secondaire 27%,$couleur_primaire 83%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: coeur 0.3s ease-in;
+    animation: coeur 0.3s ease-in both;
     }
 @keyframes coeur {
     0% {
