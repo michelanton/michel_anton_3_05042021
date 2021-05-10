@@ -121,27 +121,7 @@ a {
     border-radius: $radius_cadre_menu;
     box-shadow:  $shadow;
     cursor: pointer;
-    overflow: hidden;
-    @keyframes menu {
-        from {
-            opacity: 0;
-            transform: translateY(15px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }
-    @keyframes textmenu {
-            from {
-                opacity: 0;/*
-                transform: translateY(15px);*/
-            }
-            to {
-                opacity: 1;/*
-                transform: translateY(0px);*/
-            }
-    }  
+    overflow: hidden; 
     h4 {
         margin: 5px 0px 0px 15px;
         padding-top: 6px;
@@ -154,7 +134,7 @@ a {
         overflow: hidden;
         white-space: nowrap;
       
-        animation: textmenu 0.8s ;
+        animation: textmenu 0.8s ease-out;
     }
     p {
         overflow: hidden;
@@ -168,8 +148,26 @@ a {
         white-space: nowrap;
         font-family:  $font_regular;
       
-        animation: 0.3s textmenu ;
+        animation: 0.3s textmenu ease-out;
     }
+    @keyframes menu {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+    @keyframes textmenu {
+            from {
+                opacity: 0; 
+            }
+            to {
+                opacity: 1;
+            }
+    } 
     .prix {
         position: absolute;
         right: 10px;
